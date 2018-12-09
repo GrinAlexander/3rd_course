@@ -48,7 +48,10 @@ namespace Test_2
                 case 4:
                     Console.WriteLine("Привет четверокурсник!");
                     break;
-            }
+		default:
+			Console.WriteLine ("Просто привет!");   
+			break;
+		}
         }
 
         public static void Third()

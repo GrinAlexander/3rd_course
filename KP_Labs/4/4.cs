@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 
 namespace Test_2
 {
@@ -6,19 +6,20 @@ namespace Test_2
 	{
 		public static void Main(string[] args)
 		{
-			First();
+			//First();
 			Second();
-			Third();
+			/*();
 			Fourth();
 			Fifth();
 			Sixth();
 			Seventh();
-			Eighth();
+			Eighth();*/
 		}
 
 		public static void First()
 		{
 			Console.WriteLine("---------------------------");
+			Console.WriteLine("1st exercise");
 			int n = 1;
 			int m = 1;
 			int moreThan0 = 0;
@@ -43,18 +44,18 @@ namespace Test_2
 					}
 					else
 					{
-						Console.WriteLine("Р­Р»РµРјРµРЅС‚ СЃ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё [{0}]:[{1}] СЂР°РІРµРЅ 0", i, j);
+						Console.WriteLine("Элемент с координатами [{0}]:[{1}] равен 0", i, j);
 					}
 				}
 			}
-			Console.WriteLine("Р‘РѕР»СЊС€Рµ РЅСѓР»СЏ: {1} \nРњРµРЅСЊС€Рµ РЅСѓР»СЏ: {0}", lessThan0, moreThan0);
+			Console.WriteLine("Больше нуля: {1} \nМеньше нуля: {0}", lessThan0, moreThan0);
 			Console.ReadKey();
 		}
 
 		public static void Second()
 		{
 			Console.WriteLine("---------------------------");
-			int[] arr_A = new int[19];
+			int* arr_A = stackalloc int[12];
 			int size = 0;
 			Random random = new Random();
 			for (int i = 0; i < 19; i++)
@@ -67,7 +68,7 @@ namespace Test_2
 				}
 			}
 
-			int[] arr_B = new int[size];
+			int* arr_B = stackalloc int[size];
 			int j = 0;
 			for (int i = 0; i < arr_A.Length; i++)
 			{
@@ -92,7 +93,7 @@ namespace Test_2
 				}
 
 			}
-			Console.WriteLine("\nРњР°СЃСЃРёРІ Р’:");
+			Console.WriteLine("\nМассив В:");
 			OutputArray(arr_B);
 			Console.ReadKey();
 		}
@@ -138,10 +139,10 @@ namespace Test_2
 			{
 				p = 0.5 * (matrix[i, 0] + matrix[i, 1] + matrix[i, 2]);
 				area[i] = Math.Sqrt(p * (p - matrix[i, 0]) * (p - matrix[i, 1]) * (p - matrix[i, 2]));
-				if(area[i] == 0)
-				{
-					Console.WriteLine("РўСЂРµСѓРіРѕР»СЊРЅРёРє СЃ РёРЅРґРµРєСЃРѕРј {0} РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!", i);
-				}	
+if(area[i] == 0)
+{
+Console.WriteLine("Треугольник с индексом {0} не существует!", i);
+}
 				
 			}
 			double max = area[0], maxIndex = 0;
@@ -154,7 +155,7 @@ namespace Test_2
 				}
 
 			}
-			Console.WriteLine("\nРџР»РѕС‰Р°РґРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРІ: ");
+			Console.WriteLine("\nПлощади треугольников: ");
 
 			OutputArray(area);
 			Console.WriteLine("Max = {0}, Max index = {1}", max, maxIndex);
@@ -225,7 +226,7 @@ namespace Test_2
 				}
 				Console.WriteLine("[{0}] = {1}", i, arr[i]);
 			}
-			Console.WriteLine("7-Рµ Р·Р°РґР°РЅРёРµ РїРµСЂРІС‹Рј СЃРїРѕСЃРѕР±РѕРј: {0}, {1}", sum_1, sum_2);
+			Console.WriteLine("7-е задание первым способом: {0}, {1}", sum_1, sum_2);
 			sum_1 = 0;
 			sum_2 = 0;
 			int[] arrForSum1 = Array.FindAll(arr, n => n > 0);
@@ -238,7 +239,7 @@ namespace Test_2
 			{
 				sum_2 += arrForSum2[i];
 			}
-			Console.WriteLine("7-Рµ Р·Р°РґР°РЅРёРµ РІС‚РѕСЂС‹Рј СЃРїРѕСЃРѕР±РѕРј: {0}, {1}", sum_1, sum_2);
+			Console.WriteLine("7-е задание вторым способом: {0}, {1}", sum_1, sum_2);
 			Console.ReadKey();
 		}
 
@@ -260,7 +261,7 @@ namespace Test_2
 			{
 				sumAfterZeroElement += arr[i];
 			}
-			Console.WriteLine("8-Рµ Р·Р°РґР°РЅРёРµ РїРµСЂРІС‹Рј СЃРїРѕСЃРѕР±РѕРј: {0}", sumAfterZeroElement);
+			Console.WriteLine("8-е задание первым способом: {0}", sumAfterZeroElement);
 
 			lastZeroIndex = 0;
 			sumAfterZeroElement = 0;
@@ -272,7 +273,7 @@ namespace Test_2
 			{
 				sumAfterZeroElement += arr[i];
 			}
-			Console.WriteLine("8-Рµ Р·Р°РґР°РЅРёРµ РїРµСЂРІС‹Рј СЃРїРѕСЃРѕР±РѕРј: {0}", sumAfterZeroElement);
+			Console.WriteLine("8-е задание первым способом: {0}", sumAfterZeroElement);
 			Console.ReadKey();
 		}
 

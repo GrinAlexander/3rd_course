@@ -60,6 +60,12 @@ namespace Test_2
             Console.WriteLine("--------------------------");
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
+	    if (a > b)
+            {
+                int temp = a;
+                a = b;
+                b = temp;
+            }
             int result = 0;
             for (int i = a; i <= b; i++)
             {
