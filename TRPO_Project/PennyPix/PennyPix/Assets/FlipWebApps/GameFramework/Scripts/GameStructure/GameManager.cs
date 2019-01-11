@@ -1104,6 +1104,11 @@ namespace GameFramework.GameStructure
         {
             Players.SetSelected(playerNumber);
         }
+
+        internal void EndGame()
+        {
+            throw new NotImplementedException();
+        }
         #endregion Player Related
     }
 }
