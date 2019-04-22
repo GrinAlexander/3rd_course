@@ -1,0 +1,15 @@
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\bin\Debug\CourseProject.exe.config
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\bin\Debug\CourseProject.exe
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\bin\Debug\CourseProject.pdb
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject.csprojAssemblyReference.cache
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\MainWindow.g.cs
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\App.g.cs
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject_MarkupCompile.cache
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject_MarkupCompile.lref
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\MainWindow.baml
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject.g.resources
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject.Properties.Resources.resources
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject.csproj.GenerateResource.cache
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject.csproj.CoreCompileInputs.cache
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject.exe
+C:\Users\andro\Desktop\Курсовой\CourseProject\CourseProject\obj\Debug\CourseProject.pdb
