@@ -11,6 +11,7 @@ using System.Windows.Controls.Primitives;
 using System.IO;
 using System.Xml.Linq;
 using System.Security.Principal;
+using System.Windows.Media.Imaging;
 
 namespace CourseProject
 {
@@ -356,7 +357,7 @@ namespace CourseProject
             {
                 System.Windows.MessageBox.Show("Загрузите корректный файл с данными о кривой!");
                 return;
-            } 
+            }
             CheckOpenedXML();
         }
 
@@ -423,36 +424,64 @@ namespace CourseProject
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 InitialDirectory = "D:/",
-                Filter = " Curve's data (.xml)| *.xml|JPEG image (.jpg)|*.jpg|PNG image (.png)|*.png"
+                FilterIndex = 0,
+                Filter = "Curve's data | *.xml|JPEG image | *.jpg|PNG image |*.png"
             };
             if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 switch (saveFileDialog.FilterIndex)
                 {
-                    case 0:
-                        {
-
-                            break;
-                        }
                     case 1:
                         {
-
+                            xmlFile.Save(saveFileDialog.FileName);
                             break;
                         }
                     case 2:
                         {
-
+                            if (comboBox_curve.SelectedIndex == 0)
+                            {
+                                SaveAsBezier(saveFileDialog.FileName);
+                            }
+                            else if(comboBox_curve.SelectedIndex == 1 || comboBox_curve.SelectedIndex == 2)
+                            {
+                                pictureBox.Image.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            }
+                            break;
+                        }
+                    case 3:
+                        {
+                            if (comboBox_curve.SelectedIndex == 0)
+                            {
+                                SaveAsBezier(saveFileDialog.FileName);
+                            }
+                            else if (comboBox_curve.SelectedIndex == 1 || comboBox_curve.SelectedIndex == 2)
+                            {
+                                pictureBox.Image.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                            }
                             break;
                         }
                     default:
-                        break;
+                        {
+                            break;
+                        }
                 }
-                xmlFile.Save(saveFileDialog.FileName);
             }
             else
             {
                 return;
             }
+        }
+
+        private void SaveAsBezier(string path)
+        {
+            FileStream fs = new FileStream(path, FileMode.Create);
+            RenderTargetBitmap bmp = new RenderTargetBitmap((int)pictureCanvas.ActualWidth,
+(int)pictureCanvas.ActualHeight, 1 / 96, 1 / 96, PixelFormats.Pbgra32);
+            bmp.Render(pictureCanvas);
+            BitmapEncoder encoder = new TiffBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(bmp));
+            encoder.Save(fs);
+            fs.Close();
         }
 
         private void AddToXML()
