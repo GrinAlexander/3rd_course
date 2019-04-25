@@ -423,10 +423,30 @@ namespace CourseProject
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 InitialDirectory = "D:/",
-                Filter = " Curve's data | *.xml"
+                Filter = " Curve's data (.xml)| *.xml|JPEG image (.jpg)|*.jpg|PNG image (.png)|*.png"
             };
             if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                switch (saveFileDialog.FilterIndex)
+                {
+                    case 0:
+                        {
+
+                            break;
+                        }
+                    case 1:
+                        {
+
+                            break;
+                        }
+                    case 2:
+                        {
+
+                            break;
+                        }
+                    default:
+                        break;
+                }
                 xmlFile.Save(saveFileDialog.FileName);
             }
             else
