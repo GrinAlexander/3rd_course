@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Main" Height="450" Width="800" MinWidth="550" MinHeight="100">
+    <Window.Icon>
+        <DrawingImage>
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="Red">
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="Black" Thickness="10"/>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <GeometryGroup>
+                            <EllipseGeometry Center="50,50" RadiusX="45" RadiusY="20" />
+                            <EllipseGeometry Center="50,50" RadiusX="20" RadiusY="45" />
+                        </GeometryGroup>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </Window.Icon>
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
             <Button x:Name="button_stringOpen" Content="Строки" Click="Button_stringOpen" MinWidth="100"/>
