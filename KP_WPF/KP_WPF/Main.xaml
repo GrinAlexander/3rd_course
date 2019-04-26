@@ -1,0 +1,20 @@
+﻿<Window x:Class="KP_WPF.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KP_WPF"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Main" Height="450" Width="800" MinWidth="550" MinHeight="100">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <Button x:Name="button_stringOpen" Content="Строки" Click="Button_stringOpen" MinWidth="100"/>
+            <Button x:Name="button_createObject" Content="Создание объекта" Click="Button_createObject_click" MinWidth="100"/>
+            <Button x:Name="button_test" Content="Тест" Click="Button_test_click" MinWidth="100"/>
+            <Button x:Name="button_graphic" Content="Графика" Click="Button_graphic_click" MinWidth="100"/>
+            <Button x:Name="button_report" Content="Отчёты" Click="Button_report_click" MinWidth="100"/>
+            
+        </StackPanel>
+    </Grid>
+</Window>

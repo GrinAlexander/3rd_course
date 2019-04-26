@@ -1,0 +1,50 @@
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\bin\Debug\KP_WPF.exe.config
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\bin\Debug\KP_WPF.exe
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\bin\Debug\KP_WPF.pdb
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csprojAssemblyReference.cache
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\App.g.cs
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF_MarkupCompile.cache
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF_MarkupCompile.lref
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF.g.resources
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF.Properties.Resources.resources
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csproj.GenerateResource.cache
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csproj.CoreCompileInputs.cache
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF.exe
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\KP_WPF.pdb
+E:\KP_WPF\KP_WPF\bin\Debug\KP_WPF.exe.config
+E:\KP_WPF\KP_WPF\bin\Debug\KP_WPF.exe
+E:\KP_WPF\KP_WPF\bin\Debug\KP_WPF.pdb
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csprojAssemblyReference.cache
+E:\KP_WPF\KP_WPF\obj\Debug\App.g.cs
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF_MarkupCompile.cache
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF_MarkupCompile.lref
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF.g.resources
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF.Properties.Resources.resources
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csproj.GenerateResource.cache
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csproj.CoreCompileInputs.cache
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF.exe
+E:\KP_WPF\KP_WPF\obj\Debug\KP_WPF.pdb
+E:\KP_WPF\KP_WPF\obj\Debug\Main.g.cs
+E:\KP_WPF\KP_WPF\obj\Debug\string23.g.cs
+E:\KP_WPF\KP_WPF\obj\Debug\Main.baml
+E:\KP_WPF\KP_WPF\obj\Debug\string23.baml
+E:\KP_WPF\KP_WPF\obj\Debug\CreateObject.g.cs
+E:\KP_WPF\KP_WPF\obj\Debug\Graphic.g.cs
+E:\KP_WPF\KP_WPF\obj\Debug\Report.g.cs
+E:\KP_WPF\KP_WPF\obj\Debug\Test.g.cs
+E:\KP_WPF\KP_WPF\obj\Debug\CreateObject.baml
+E:\KP_WPF\KP_WPF\obj\Debug\Graphic.baml
+E:\KP_WPF\KP_WPF\obj\Debug\Report.baml
+E:\KP_WPF\KP_WPF\obj\Debug\Test.baml
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\CreateObject.g.cs
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Graphic.g.cs
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Main.g.cs
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Report.g.cs
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\string23.g.cs
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Test.g.cs
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\CreateObject.baml
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Graphic.baml
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Main.baml
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Report.baml
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\string23.baml
+C:\Users\andro\Desktop\Учёба\VS Projects\KP_WPF\KP_WPF\obj\Debug\Test.baml

@@ -1,0 +1,18 @@
+﻿<Window x:Class="KP_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KP_WPF"
+        mc:Ignorable="d"
+        Title="KP Lab" Height="450" Width="450" MinHeight="320" MinWidth="450">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBox x:Name="tb_input" BorderThickness="1" FontFamily="Garamond" FontSize="13" Foreground="Purple" TextWrapping="Wrap" MinWidth="150" >Введите текст</TextBox>
+            <Button Content="Проверить на палиндром" Click="Button_Check_click" Height="30"/>
+            <Border  BorderThickness="1" MinWidth="150" BorderBrush="Black">
+                <TextBlock x:Name="tblock_result"  FontFamily="Garamond" FontSize="13" Foreground="Red"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>
