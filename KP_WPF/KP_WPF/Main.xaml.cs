@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 namespace KP_WPF
 {
+    
     /// <summary>
     /// Логика взаимодействия для Main.xaml
     /// </summary>
@@ -22,9 +23,6 @@ namespace KP_WPF
     {
         public Main()
         {
-            SplashScreen splash = new SplashScreen("/Icons/splash.png");
-            splash.Show(true);
-            Thread.Sleep(1500);
             InitializeComponent();
         }
 

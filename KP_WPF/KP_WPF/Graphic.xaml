@@ -6,6 +6,23 @@
         xmlns:local="clr-namespace:KP_WPF"
         mc:Ignorable="d"
         Title="Graphic" Height="450" Width="800">
+    <Window.Icon>
+        <DrawingImage>
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="Aqua">
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="DarkBlue" Thickness="10"/>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <GeometryGroup>
+                            <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50" />
+                            <EllipseGeometry Center="35,35" RadiusX="50" RadiusY="50" />
+                        </GeometryGroup>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </Window.Icon>
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
     </Grid>

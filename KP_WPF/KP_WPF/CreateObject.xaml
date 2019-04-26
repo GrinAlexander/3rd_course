@@ -6,6 +6,27 @@
         xmlns:local="clr-namespace:KP_WPF"
         mc:Ignorable="d"
         Title="CreateObject" Height="450" Width="800">
+    <Window.Icon>
+        <DrawingImage>
+            <DrawingImage.Drawing>
+                <GeometryDrawing Brush="Red">
+                    <GeometryDrawing.Pen>
+                        <Pen Thickness="10" Brush="Black"/>
+                    </GeometryDrawing.Pen>
+                    <GeometryDrawing.Geometry>
+                        <GeometryGroup>
+                            <EllipseGeometry Center="100,240" RadiusX="30" RadiusY="30" />
+                            <RectangleGeometry>
+                                <RectangleGeometry.Rect>
+                                    <Rect Size="40, 120" Location="85, 50"/>
+                                </RectangleGeometry.Rect>
+                            </RectangleGeometry>
+                        </GeometryGroup>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </Window.Icon>
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
     </Grid>

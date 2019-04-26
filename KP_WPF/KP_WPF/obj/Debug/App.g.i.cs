@@ -61,6 +61,8 @@ namespace KP_WPF {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("icons/splash.png");
+            splashScreen.Show(true);
             KP_WPF.App app = new KP_WPF.App();
             app.InitializeComponent();
             app.Run();
