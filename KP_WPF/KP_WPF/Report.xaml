@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KP_WPF"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Report" Height="450" Width="800">
     <Window.Icon>
         <DrawingImage>
@@ -15,8 +16,8 @@
                             <Pen.Brush>
                                 <LinearGradientBrush>
                                     <GradientStop Offset="0.0" Color="Blue" />
-                                    <GradientStop Offset="2.5" Color="Purple"/>
-                                    <GradientStop Offset="5.0" Color="DarkRed" />
+                                    <GradientStop Offset="0.5" Color="White"/>
+                                    <GradientStop Offset="1.0" Color="Blue" />
                                 </LinearGradientBrush>
                             </Pen.Brush>
                         </Pen>
@@ -31,7 +32,6 @@
             </DrawingImage.Drawing>
         </DrawingImage>
     </Window.Icon>
-
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
     </Grid>

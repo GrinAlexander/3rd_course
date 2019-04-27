@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KP_WPF"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="KP Lab" Height="450" Width="450" MinHeight="320" MinWidth="450">
     <Window.Icon>
         <DrawingImage>

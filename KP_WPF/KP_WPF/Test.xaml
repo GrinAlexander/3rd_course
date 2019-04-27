@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KP_WPF"
         mc:Ignorable="d"
-        Title="Test" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="Test" Height="800" Width="800" MinWidth="600" MinHeight="600">
     <Window.Icon>
         <DrawingImage>
             <DrawingImage.Drawing>
@@ -31,7 +32,149 @@
             </DrawingImage.Drawing>
         </DrawingImage>
     </Window.Icon>
-    <Grid>
+    <Grid x:Name="layoutRoot" Background="LightGray">
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
+        <Label Content="1. Я чувствую подавленность." Margin="30, 30, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="2. Утром я чувствую себя лучше всего." Margin="30, 60, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="3. У меня бывают периоды плача или близости к слезам." Margin="30, 90, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="4. У меня плохой ночной сон." Margin="30, 120, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="5. Аппетит у меня не хуже обычного." Margin="30, 150, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="6. Мне приятно смотреть на привлекательных женщин(мужчин), разговаривать с ним, находиться рядом" Margin="30, 180, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="7. Я замечаю, что теряю вес." Margin="30, 210, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="8. Меня беспокоят запоры." Margin="30, 240, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="9. Сердце бьётся быстрее, чем обычно." Margin="30, 270, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="10. Я устаю без всяких причин." Margin="30, 300, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="11. Я мыслю так же ясно, как всегда." Margin="30, 330, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="12. Мне легко делать то, что умею." Margin="30, 360, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="13. Чувствую беспокойство и не могу усидеть на месте." Margin="30, 390, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="14. У меня есть надежды на будущее." Margin="30, 420, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="15. Я более раздражителен, чем обычно." Margin="30, 450, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="16. Мне легко принимать решения." Margin="30, 480, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="17. Я чувствую, что полезен и необходим" Margin="30, 510, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="18. Я живу достаточно полной жизнью." Margin="30, 540, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="19. Я чувствую, что другим людям станет лучше, если я умру." Margin="30, 570, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="20. Меня до сих пор радует то, что радовало всегда." Margin="30, 600, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <ComboBox x:Name="combobox_1" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 30, 30, 0" >
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_2" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 60, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_3"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 90, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_4"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 120, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_5"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 150, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_6"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 180, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_7"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 210, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_8"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 240, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_9"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 270, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_10"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 300, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_11"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 330, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_12"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 360, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_13"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 390, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_14"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 420, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_15"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 450, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_16"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 480, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_17"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 510, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_18"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 540, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_19"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 570, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <ComboBox x:Name="combobox_20"  Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0, 600, 30, 0">
+            <ComboBoxItem Content="Всегда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Часто" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Иногда" HorizontalAlignment="Left" Width="98"/>
+            <ComboBoxItem Content="Никогда" HorizontalAlignment="Left" Width="98"/>
+        </ComboBox>
+        <Button x:Name="button_result" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="30" Width="120" Content="Результат" Margin="0, 0, 0, 100" Click="button_result_Click"></Button>
+        <Label x:Name="label_result" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="30, 0, 0, 50" Content="Результат: "/>
     </Grid>
 </Window>

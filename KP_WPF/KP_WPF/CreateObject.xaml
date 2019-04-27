@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KP_WPF"
         mc:Ignorable="d"
-        Title="CreateObject" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="CreateObject" Height="800" Width="600">
     <Window.Icon>
         <DrawingImage>
             <DrawingImage.Drawing>
@@ -27,7 +28,50 @@
             </DrawingImage.Drawing>
         </DrawingImage>
     </Window.Icon>
-    <Grid>
-        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid >
+            <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
+            <Button x:Name="button_create" Content="Создать" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30,0,0,120" Click="button_create_Click"/>
+            <Label Content="Тип" Margin="30, 30, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Объём" Margin="30, 60, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Потребляемая мощность" Margin="30, 90, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Цвет" Margin="30, 120, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="В комплекте" Margin="30, 150, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Покрытие чаши" Margin="30, 180, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Режим подогрева" Margin="30, 210, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Число автоматических программ" Margin="30, 240, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Программы приготовления" Margin="30, 270, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Ускоренное приготовление" Margin="30, 300, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Равномерный нагрев пищи" Margin="30, 330, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Тип нагрева" Margin="30, 360, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Установка точной температуры" Margin="30, 390, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Тип управления" Margin="30, 420, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Установка времени приготовления" Margin="30, 450, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Отсрочка старта" Margin="30, 480, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Голосовой гид" Margin="30, 510, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Дисплей" Margin="30, 540, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Тип дисплея" Margin="30, 570, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_type" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,30,0"/>
+            <TextBox x:Name="tb_amount" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,60,30,0"/>
+            <TextBox x:Name="tb_power" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,90,30,0"/>
+            <TextBox x:Name="tb_color" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,120,30,0"/>
+            <TextBox x:Name="tb_complect" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,150,30,0"/>
+            <TextBox x:Name="tb_material" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,180,30,0"/>
+            <TextBox x:Name="tb_heating" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,210,30,0"/>
+            <TextBox x:Name="tb_countProgramms" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,240,30,0"/>
+            <TextBox x:Name="tb_programms" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,270,30,0"/>
+            <TextBox x:Name="tb_fastCooking" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,300,30,0"/>
+            <TextBox x:Name="tb_evenHeating" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,330,30,0"/>
+            <TextBox x:Name="tb_heatingType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,360,30,0"/>
+            <TextBox x:Name="tb_settingDeg" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,390,30,0"/>
+            <TextBox x:Name="tb_handlingType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,420,30,0"/>
+            <TextBox x:Name="tb_settingTime" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,450,30,0"/>
+            <TextBox x:Name="tb_startDelay" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,480,30,0"/>
+            <TextBox x:Name="tb_voiceGuide" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,510,30,0"/>
+            <TextBox x:Name="tb_display" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,540,30,0"/>
+            <TextBox x:Name="tb_displayType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,570,30,0"/>
+            <Image Source="C:/Users/Student403/Desktop/logo.png" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin =" 0, 0, 50, 50"></Image>
+        </Grid>
+    </ScrollViewer>
+    
 </Window>
