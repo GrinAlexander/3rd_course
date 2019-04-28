@@ -29,9 +29,31 @@
         </DrawingImage>
     </Window.Icon>
     <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <Grid >
-            <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
-            <Button x:Name="button_create" Content="Создать" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30,0,0,120" Click="button_create_Click"/>
+        <Grid>
+            <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это Button" />
+                            <TextBlock Text="Нажмите, чтобы выйти в главное меню" />
+                            <Image Source="/Icon/back.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="button_create" Content="Создать" Width="48" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30,0,0,120" Click="button_create_Click">
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это Button" />
+                            <TextBlock Text="Нажмите, чтобы создать объект" />
+                            <TextBlock Text="Создаёт объект тогда, когда вводимые значения правильны" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/createObject.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
+            </Button>
             <Label Content="Тип" Margin="30, 30, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label Content="Объём" Margin="30, 60, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label Content="Потребляемая мощность" Margin="30, 90, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -51,27 +73,254 @@
             <Label Content="Голосовой гид" Margin="30, 510, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label Content="Дисплей" Margin="30, 540, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label Content="Тип дисплея" Margin="30, 570, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_type" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,30,0"/>
-            <TextBox x:Name="tb_amount" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,60,30,0"/>
-            <TextBox x:Name="tb_power" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,90,30,0"/>
-            <TextBox x:Name="tb_color" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,120,30,0"/>
-            <TextBox x:Name="tb_complect" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,150,30,0"/>
-            <TextBox x:Name="tb_material" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,180,30,0"/>
-            <TextBox x:Name="tb_heating" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,210,30,0"/>
-            <TextBox x:Name="tb_countProgramms" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,240,30,0"/>
-            <TextBox x:Name="tb_programms" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,270,30,0"/>
-            <TextBox x:Name="tb_fastCooking" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,300,30,0"/>
-            <TextBox x:Name="tb_evenHeating" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,330,30,0"/>
-            <TextBox x:Name="tb_heatingType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,360,30,0"/>
-            <TextBox x:Name="tb_settingDeg" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,390,30,0"/>
-            <TextBox x:Name="tb_handlingType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,420,30,0"/>
-            <TextBox x:Name="tb_settingTime" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,450,30,0"/>
-            <TextBox x:Name="tb_startDelay" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,480,30,0"/>
-            <TextBox x:Name="tb_voiceGuide" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,510,30,0"/>
-            <TextBox x:Name="tb_display" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,540,30,0"/>
-            <TextBox x:Name="tb_displayType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,570,30,0"/>
-            <Image Source="C:/Users/Student403/Desktop/logo.png" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin =" 0, 0, 50, 50"></Image>
+            <TextBox x:Name="tb_type" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите тип мультиварки" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/type.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_amount" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,60,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите объём мультиварки" />
+                            <TextBlock Text="Заполняется только цифрами 0-9" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/amount.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_power" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,90,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите мощность мультиварки" />
+                            <TextBlock Text="Заполняется только цифрами 0-9" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/power.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_color" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,120,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите цвет мультиварки" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/color.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_complect" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,150,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите комплект аксессуаров для мультиварки" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/accessories.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_material" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,180,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите покрытие мультиварки" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/material.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_heating" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,210,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие режима подогрева" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад'" />
+                            <Image Source="/Icon/heatingType.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_countProgramms" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,240,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите количество программ мультиварки" />
+                            <TextBlock Text="Заполняется только цифрами 0-9" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/programmsCount.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_programms" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,270,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите программы мультиварки" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/programm.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_fastCooking" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,300,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие ускоренного приготовления"/>
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/fastCooking.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_evenHeating" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,330,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие равномерного нагрева" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/evenHeating.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_heatingType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,360,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите тип нагрева" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/heatingType.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_settingDeg" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,390,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие установки точной температуры" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/settingDeg.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_handlingType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,420,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите тип управления мультиваркой" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/handlingType.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_settingTime" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,450,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие установки времени приготовления" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/settingTime.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_startDelay" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,480,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие отсрочки старта" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/startDelay.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_voiceGuide" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,510,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие голосового гида" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/voiceGuide.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_display" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,540,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите наличие дисплея" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/display.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="tb_displayType" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,570,30,0">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock Text="Это TextBox" />
+                            <TextBlock Text="Введите тип дисплея" />
+                            <TextBlock Text="Заполняется только буквами" />
+                            <TextBlock Text="Чтобы выйти, нажать на кнопку 'назад' " />
+                            <Image Source="/Icon/displayType.png"/>
+                        </StackPanel>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+            <Image Source="/Icon/logo.png" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin =" 0, 0, 50, 50"></Image>
         </Grid>
     </ScrollViewer>
-    
 </Window>

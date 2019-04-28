@@ -129,5 +129,44 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Icon\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\accessories.png" />
+    <Resource Include="Icon\amount.png" />
+    <Resource Include="Icon\color.png" />
+    <Resource Include="Icon\fastCooking.png" />
+    <Resource Include="Icon\material.png" />
+    <Resource Include="Icon\power.png" />
+    <Resource Include="Icon\programm.png" />
+    <Resource Include="Icon\programmsCount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\display.png" />
+    <Resource Include="Icon\displayType.png" />
+    <Resource Include="Icon\handlingType.png" />
+    <Resource Include="Icon\settingTime.png" />
+    <Resource Include="Icon\startDelay.png" />
+    <Resource Include="Icon\voiceGuide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\evenHeating.png" />
+    <Resource Include="Icon\heating.png" />
+    <Resource Include="Icon\heatingType.png" />
+    <Resource Include="Icon\settingDeg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\createObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
