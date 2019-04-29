@@ -9,3 +9,9 @@ E:\ТРПО\AddToSQL\MD5Hash\obj\Debug\MD5Lib.csprojAssemblyReference.cache
 E:\ТРПО\AddToSQL\MD5Hash\obj\Debug\MD5Lib.csproj.CoreCompileInputs.cache
 E:\ТРПО\AddToSQL\MD5Hash\obj\Debug\MD5Hash.dll
 E:\ТРПО\AddToSQL\MD5Hash\obj\Debug\MD5Hash.pdb
+C:\Users\andro\Documents\GitHub\3rd_course\AddToSQL\MD5Hash\bin\Debug\MD5Hash.dll
+C:\Users\andro\Documents\GitHub\3rd_course\AddToSQL\MD5Hash\bin\Debug\MD5Hash.pdb
+C:\Users\andro\Documents\GitHub\3rd_course\AddToSQL\MD5Hash\obj\Debug\MD5Lib.csprojAssemblyReference.cache
+C:\Users\andro\Documents\GitHub\3rd_course\AddToSQL\MD5Hash\obj\Debug\MD5Lib.csproj.CoreCompileInputs.cache
+C:\Users\andro\Documents\GitHub\3rd_course\AddToSQL\MD5Hash\obj\Debug\MD5Hash.dll
+C:\Users\andro\Documents\GitHub\3rd_course\AddToSQL\MD5Hash\obj\Debug\MD5Hash.pdb

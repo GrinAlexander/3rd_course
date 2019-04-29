@@ -1,24 +1,28 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using MD5Lib;
 using SQLib;
 
+
 namespace AddToSQL
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        private SignIn signIn = new SignIn(@"Initial Catalog=TestBD;Integrated Security=True", "Person");
-        private SignUp signUp = new SignUp(@"Initial Catalog=TestBD;Integrated Security=True", "Person");
-        public Form1()
+        private User user;
+        public MainForm()
         {
             InitializeComponent();
+            user = new User(new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=TestBD;Integrated Security=True"), "Person");
         }
 
         private void button_addNote_Click(object sender, EventArgs e)
         {
             try
             {
-                bool check = signUp.InsertNote(tb_loginSignUp.Text, MD5Hash.GetHash(tb_passwordSignUp.Text));
+                user.Login = tb_loginSignUp.Text;
+                user.Password = MD5Hash.GetHash(tb_passwordSignUp.Text);
+                bool check = user.SignUp();
                 if (check)
                 {
                     label_SignUp_Notification.Text = "Пользователь зарегистрирован";
@@ -38,7 +42,7 @@ namespace AddToSQL
         {
             try
             {
-                dataGrid_table.DataSource = signIn.ShowNotes();
+                dataGrid_table.DataSource = user.ShowUsers();
             }
             catch (SQLHandlerException ex)
             {
@@ -50,7 +54,9 @@ namespace AddToSQL
         {
             try
             {
-                bool check = signIn.CheckUserAvailability(tb_loginSignIn.Text, MD5Hash.GetHash(tb_passwordSignIn.Text));
+                user.Login = tb_loginSignIn.Text;
+                user.Password = MD5Hash.GetHash(tb_passwordSignIn.Text);
+                bool check = user.SignIn();
                 if (check)
                 {
                     label_SignIn_Notification.Text = "Пользователь существует";

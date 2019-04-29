@@ -14,9 +14,9 @@ namespace SQLib
         /// </summary>
         /// <param name="connection">Строка подключения к базе данных</param>
         /// <param name="tableName">Название таблицы, к которой требуется обращение</param>
-        public SignUp(string connection, string tableName)
+        public SignUp(SqlConnection connection, string tableName)
         {
-            this.connection = new SqlConnection(@connection);
+            this.connection = connection;
             this.tableName = tableName;
         }
 

@@ -4,11 +4,10 @@ namespace SQLib
 {
     public class SQLHandlerException : Exception
     {
-        public string Message;
+        public new string Message;
         public SQLHandlerException(string message) : base(message)
         {
             Message = message;
         }
     }
-
 }

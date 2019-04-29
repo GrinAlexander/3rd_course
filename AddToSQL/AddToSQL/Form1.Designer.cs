@@ -1,6 +1,6 @@
 ﻿namespace AddToSQL
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -177,7 +177,7 @@
             this.label_SignIn_Notification.Size = new System.Drawing.Size(0, 13);
             this.label_SignIn_Notification.TabIndex = 18;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,8 +196,8 @@
             this.Controls.Add(this.button_addNote);
             this.Controls.Add(this.tb_passwordSignUp);
             this.Controls.Add(this.tb_loginSignUp);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

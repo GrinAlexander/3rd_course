@@ -1,5 +1,4 @@
 ﻿using System.Data.SqlClient;
-using System.Data;
 
 namespace SQLib
 {
@@ -15,9 +14,9 @@ namespace SQLib
         /// </summary>
         /// <param name="connection">Строка подключения к базе данных</param>
         /// <param name="tableName">Название таблицы, к которой требуется обращение</param>
-        public SignIn(string connection, string tableName)
+        public SignIn(SqlConnection connection, string tableName)
         {
-            this.connection = new SqlConnection(@connection);
+            this.connection = connection;
             this.tableName = tableName;
         }
 
@@ -48,20 +47,5 @@ namespace SQLib
             connection.Close();
             return check;
         } 
-
-        /// <summary>
-        /// Метод выводит записи подключенной таблицы
-        /// </summary>
-        /// <returns></returns>
-        public DataTable ShowNotes()
-        {
-            DataTable table = new DataTable();
-            connection.Open();
-            command = new SqlCommand($"SELECT * FROM [{this.tableName}]", connection);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            adapter.Fill(table);
-            connection.Close();
-            return table;
-        }
     }
 }
