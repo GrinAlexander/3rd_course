@@ -1,0 +1,9 @@
+E:\ТРПО\AddToSQL\SQLib\bin\Debug\SQLib.dll
+E:\ТРПО\AddToSQL\SQLib\bin\Debug\SQLib.pdb
+E:\ТРПО\AddToSQL\SQLib\bin\Debug\MD5Hash.dll
+E:\ТРПО\AddToSQL\SQLib\bin\Debug\MD5Hash.pdb
+E:\ТРПО\AddToSQL\SQLib\obj\Debug\SQLib.csprojAssemblyReference.cache
+E:\ТРПО\AddToSQL\SQLib\obj\Debug\SQLib.csproj.CoreCompileInputs.cache
+E:\ТРПО\AddToSQL\SQLib\obj\Debug\SQLib.csproj.CopyComplete
+E:\ТРПО\AddToSQL\SQLib\obj\Debug\SQLib.dll
+E:\ТРПО\AddToSQL\SQLib\obj\Debug\SQLib.pdb

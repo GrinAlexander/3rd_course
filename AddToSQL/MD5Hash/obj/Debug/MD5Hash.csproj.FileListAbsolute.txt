@@ -1,0 +1,5 @@
+G:\ТРПО\AddToSQL\MD5Hash\bin\Debug\MD5Hash.dll
+G:\ТРПО\AddToSQL\MD5Hash\bin\Debug\MD5Hash.pdb
+G:\ТРПО\AddToSQL\MD5Hash\obj\Debug\MD5Hash.csproj.CoreCompileInputs.cache
+G:\ТРПО\AddToSQL\MD5Hash\obj\Debug\MD5Hash.dll
+G:\ТРПО\AddToSQL\MD5Hash\obj\Debug\MD5Hash.pdb

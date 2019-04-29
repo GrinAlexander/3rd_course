@@ -1,0 +1,45 @@
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe.config
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\bin\Debug\AddToSQL.pdb
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csprojAssemblyReference.cache
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Form1.resources
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Properties.Resources.resources
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.GenerateResource.cache
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.CoreCompileInputs.cache
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\obj\Debug\AddToSQL.exe
+C:\Users\andro\Desktop\Учёба\VS Projects\AddToSQL\AddToSQL\obj\Debug\AddToSQL.pdb
+E:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe.config
+E:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe
+E:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.pdb
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Form1.resources
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Properties.Resources.resources
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.GenerateResource.cache
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.exe
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.pdb
+G:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe.config
+G:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe
+G:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.pdb
+G:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csprojAssemblyReference.cache
+G:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Form1.resources
+G:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Properties.Resources.resources
+G:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.GenerateResource.cache
+G:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.CoreCompileInputs.cache
+G:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.exe
+G:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.pdb
+F:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe.config
+F:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.exe
+F:\ТРПО\AddToSQL\AddToSQL\bin\Debug\AddToSQL.pdb
+F:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csprojAssemblyReference.cache
+F:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Form1.resources
+F:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.Properties.Resources.resources
+F:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.GenerateResource.cache
+F:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.CoreCompileInputs.cache
+F:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.exe
+F:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.pdb
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csprojAssemblyReference.cache
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.CoreCompileInputs.cache
+E:\ТРПО\AddToSQL\AddToSQL\bin\Debug\MD5Hash.dll
+E:\ТРПО\AddToSQL\AddToSQL\bin\Debug\MD5Hash.pdb
+E:\ТРПО\AddToSQL\AddToSQL\obj\Debug\AddToSQL.csproj.CopyComplete
+E:\ТРПО\AddToSQL\AddToSQL\bin\Debug\SQLib.dll
+E:\ТРПО\AddToSQL\AddToSQL\bin\Debug\SQLib.pdb
