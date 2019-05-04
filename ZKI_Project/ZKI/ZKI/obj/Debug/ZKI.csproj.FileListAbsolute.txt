@@ -8,3 +8,13 @@ C:\Users\andro\Desktop\Учёба\VS Projects\ZKI\ZKI\bin\Debug\ZKI.pdb
 C:\Users\andro\Desktop\Учёба\VS Projects\ZKI\ZKI\obj\Debug\ZKI.exe
 C:\Users\andro\Desktop\Учёба\VS Projects\ZKI\ZKI\obj\Debug\ZKI.pdb
 C:\Users\andro\Desktop\Учёба\VS Projects\ZKI\ZKI\obj\Debug\ZKI.Form1.resources
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\bin\Debug\ZKI.exe.config
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\bin\Debug\ZKI.exe
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\bin\Debug\ZKI.pdb
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\obj\Debug\ZKI.csprojAssemblyReference.cache
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\obj\Debug\ZKI.Form1.resources
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\obj\Debug\ZKI.Properties.Resources.resources
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\obj\Debug\ZKI.csproj.GenerateResource.cache
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\obj\Debug\ZKI.csproj.CoreCompileInputs.cache
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\obj\Debug\ZKI.exe
+C:\Users\andro\Documents\GitHub\3rd_course\ZKI_Project\ZKI\ZKI\obj\Debug\ZKI.pdb

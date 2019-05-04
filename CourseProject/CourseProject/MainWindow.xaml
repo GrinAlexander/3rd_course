@@ -16,7 +16,10 @@
                     <MenuItem Header="Очистить" Click="Button_ClearCanvas"/>
                     <MenuItem Header="Закрыть" Click="ExitApp"/>
                 </MenuItem>
-                <MenuItem Header="О программе" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="menuItem_About"/>
+                <MenuItem Header="О программе" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    <MenuItem Header="Разработчик" Click="menuItem_About"/>
+                    <MenuItem Header="Справка" Click="menuItem_Manual"/>
+                </MenuItem>
             </Menu>
         </StackPanel>
         <Grid Margin="36,22,36,649" >

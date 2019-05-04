@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ZKI.Ciphers;
 
@@ -6,6 +7,7 @@ namespace ZKI
 {
     public partial class Form1 : Form
     {
+        //private RSA obj = new RSA();
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +44,7 @@ namespace ZKI
                                         {
                                             MessageBox.Show("Введите корректный ключ!");
                                         }
-                                        
+
                                     }
                                     break;
                                 }
@@ -58,8 +60,15 @@ namespace ZKI
                                     }
                                     else
                                     {
-                                        Vigenere obj = new Vigenere(textBox_input.Text.ToLower(), textBox_key.Text.ToLower());
-                                        textBox_output.Text = obj.Encrypt();
+                                        try
+                                        {
+                                            Vigenere obj = new Vigenere(textBox_input.Text.ToLower(), textBox_key.Text.ToLower());
+                                            textBox_output.Text = obj.Encrypt();
+                                        }
+                                        catch (Exception)
+                                        {
+                                            MessageBox.Show("Введите корректный ключ!");
+                                        }
                                     }
                                     break;
                                 }
@@ -110,8 +119,17 @@ namespace ZKI
                                     }
                                     else
                                     {
-                                        Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
+                                        try
+                                        {
+Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
                                         textBox_output.Text = obj.Encrypt();
+                                        }
+                                        catch (Exception)
+                                        {
+
+                                            MessageBox.Show("Введите ключ для шифрования!");
+                                        }
+                                        
                                     }
                                     break;
                                 }
@@ -140,9 +158,14 @@ namespace ZKI
                                         {
                                             long key_1 = Convert.ToInt64(textBox_key.Text.ToLower());
                                             long key_2 = Convert.ToInt64(textBox_key2.Text.ToLower());
+                                            if (key_1 < 7 || key_2 < 7)
+                                            {
+                                                MessageBox.Show("Простые числа должны быть больше 7!");
+                                                return;
+                                            }
                                             if (RSA.IsTheNumberSimple(key_1) && RSA.IsTheNumberSimple(key_2))
                                             {
-                                                RSA obj = new RSA(textBox_input.Text.ToLower(), key_1, key_2);
+                                                RSA obj = new RSA(textBox_input.Text, key_1, key_2);
                                                 textBox_output.Text = obj.Encrypt();
                                             }
                                             else
@@ -209,8 +232,16 @@ namespace ZKI
                                     }
                                     else
                                     {
-                                        Vigenere obj = new Vigenere(textBox_input.Text.ToLower(), textBox_key.Text.ToLower());
-                                        textBox_output.Text = obj.Decrypt();
+                                        try
+                                        {
+                                            Vigenere obj = new Vigenere(textBox_input.Text.ToLower(), textBox_key.Text.ToLower());
+                                            textBox_output.Text = obj.Decrypt();
+                                        }
+                                        catch (Exception)
+                                        {
+                                            MessageBox.Show("Введите корректный ключ!");
+                                        }
+
                                     }
                                     break;
                                 }
@@ -237,7 +268,7 @@ namespace ZKI
                                     else
                                     {
                                         Wheatstone obj = new Wheatstone(textBox_input.Text, textBox_key.Text, textBox_key2.Text);
-                                       textBox_output.Text = obj.Decrypt();
+                                        textBox_output.Text = obj.Decrypt();
                                     }
                                     break;
                                 }
@@ -249,8 +280,16 @@ namespace ZKI
                                     }
                                     else
                                     {
-                                        Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
-                                        textBox_output.Text = obj.Decrypt();
+                                        try
+                                        {
+                                            Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
+                                            textBox_output.Text = obj.Decrypt();
+                                        }
+                                        catch (Exception)
+                                        {
+
+                                            MessageBox.Show("Введите ключ для шифрования!");
+                                        }
                                     }
                                     break;
                                 }
@@ -277,7 +316,49 @@ namespace ZKI
                                     {
                                         try
                                         {
-                                            
+
+                                            long key_1 = Convert.ToInt64(textBox_key.Text);
+                                            long key_2 = Convert.ToInt64(textBox_key2.Text);
+                                            if (key_1 < 7 || key_2 < 7)
+                                            {
+                                                MessageBox.Show("Простые числа должны быть больше 7!");
+                                                return;
+                                            }
+                                            for (int i = 0; i < textBox_input.Text.Length; i++)
+                                            {
+                                                if (!char.IsDigit(textBox_input.Text[i]) && textBox_input.Text[i] != ' ')
+                                                {
+                                                    MessageBox.Show("Текст для дешифрования должен состоять только из цифр!");
+                                                    return;
+                                                }
+                                            }
+                                            if (RSA.IsTheNumberSimple(key_1) && RSA.IsTheNumberSimple(key_2))
+                                            {
+                                                List<string> list = new List<string>();
+                                                string item = null;
+                                                for (int i = 0; i < textBox_input.Text.Length; i++)
+                                                {
+                                                    if (char.IsDigit(textBox_input.Text[i]))
+                                                    {
+                                                        item += textBox_input.Text[i];
+                                                    }
+                                                    else
+                                                    {
+                                                        list.Add(item);
+                                                        item = null;
+                                                    }
+                                                }
+                                                if (int.TryParse(item, out int x))
+                                                {
+                                                    list.Add(item);
+                                                }
+                                                RSA obj = new RSA(textBox_input.Text, key_1, key_2);
+                                                textBox_output.Text = obj.Decrypt(list);
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Ключи должны быть простыми числами!");
+                                            }
 
                                         }
                                         catch
@@ -296,7 +377,7 @@ namespace ZKI
                         break;
                     }
             }
-            
+
         }
 
         private void comboBox_cipher_SelectedIndexChanged(object sender, EventArgs e)

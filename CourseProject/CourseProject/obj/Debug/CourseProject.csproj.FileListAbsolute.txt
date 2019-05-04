@@ -28,3 +28,5 @@ C:\Users\andro\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\Debug
 C:\Users\andro\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\Debug\CourseProject.csproj.CoreCompileInputs.cache
 C:\Users\andro\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\Debug\CourseProject.exe
 C:\Users\andro\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\Debug\CourseProject.pdb
+C:\Users\andro\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\Debug\Manual.chm
+C:\Users\andro\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\Debug\CourseProject_Content.g.cs

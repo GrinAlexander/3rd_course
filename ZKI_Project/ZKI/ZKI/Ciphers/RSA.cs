@@ -19,8 +19,12 @@ namespace ZKI
         private long e_;
         private List<string> result = new List<string>();
 
-        char[] alphabit = new char[] { '#', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о',
-        'п', 'р', 'с', 'т', 'у', 'ф', 'х','ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь','э', 'ю', 'я', '0', '1', '2', '3','4', '5', '6', '7', '8', '9'};
+        char[] alphabit = new char[] { '.', ',', '!', '?', ' ', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о',
+        'п', 'р', 'с', 'т', 'у', 'ф', 'х','ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь','э', 'ю', 'я', '0', '1', '2', '3','4', '5', '6', '7', '8', '9', 'А', 'Б',  'В', 'Г',
+         'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я', 'a', 'b', 'c', 'd', 'e',
+         'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+
         private List<string> bigrams = new List<string>();
         public RSA(string mainString, long key_1, long key_2)
         {
@@ -32,6 +36,8 @@ namespace ZKI
             d = Calculate_d(m);
             e_ = Calculate_e(d, m);
         }
+        public RSA()
+        { }
         public string Encrypt()
         {
             BigInteger bi;
@@ -50,19 +56,20 @@ namespace ZKI
             }
             return encryptedString;
         }
-        public string Decrypt()
+        public string Decrypt(List<string> input)
         {
+            string result = "";
             BigInteger bi;
-            foreach (string item in result)
+            foreach (string item in input)
             {
                 bi = new BigInteger(Convert.ToDouble(item));
                 bi = BigInteger.Pow(bi, (int)d);
                 BigInteger n_ = new BigInteger((int)n);
                 bi = bi % n_;
                 int index = Convert.ToInt32(bi.ToString());
-                decryptedString += alphabit[index].ToString();
+                result += alphabit[index].ToString();
             }
-            return decryptedString;
+            return result;
         }
         private long Calculate_d(long m)
         {

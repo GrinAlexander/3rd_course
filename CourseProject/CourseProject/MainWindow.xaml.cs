@@ -12,6 +12,7 @@ using System.IO;
 using System.Xml.Linq;
 using System.Security.Principal;
 using System.Windows.Media.Imaging;
+using System.Diagnostics;
 
 namespace CourseProject
 {
@@ -730,6 +731,11 @@ namespace CourseProject
         private void ExitApp(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void menuItem_Manual(object sender, RoutedEventArgs e)
+        {
+            Process.Start("Manual.chm");
         }
 
         private void menuItem_About(object sender, RoutedEventArgs e)
