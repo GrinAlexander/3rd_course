@@ -102,6 +102,7 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
+    <Resource Include="icon.ico" />
     <Content Include="Manual.chm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

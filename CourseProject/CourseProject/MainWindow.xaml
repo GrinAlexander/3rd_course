@@ -6,7 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseProject"
         mc:Ignorable="d"
-        Title="Curve" Height="900" Width="900" MinHeight="700" MinWidth="750" WindowStartupLocation="CenterScreen">
+        Icon="icon.ico"
+        Title="Curve" Height="900" Width="900" MinHeight="900" MinWidth="750" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Horizontal">
             <Menu HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Aqua" Background="White">
