@@ -135,7 +135,26 @@ Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
                                 }
                             case 5: //Шифрующие таблицы
                                 {
-
+                                    if (textBox_input.Text == "")
+                                    {
+                                        MessageBox.Show("Введите текст для шифрования!");
+                                    }
+                                    else if (textBox_key.Text == "")
+                                    {
+                                        MessageBox.Show("Введите первое простое число для шифрования!");
+                                    }
+                                    else
+                                    {
+                                        //try
+                                        //{
+                                            EncryptionTable obj = new EncryptionTable(textBox_input.Text.ToLower(), textBox_key.Text);
+                                            textBox_output.Text = obj.Encrypt();
+                                        //}
+                                       // catch
+                                        //{
+                                        //    MessageBox.Show("Введите корректные данные!");
+                                       // }
+                                    }
                                     break;
                                 }
                             case 6: //РСА
@@ -438,7 +457,11 @@ Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
                     }
                 case 5:
                     {
-
+                        label_key2.Hide();
+                        textBox_key2.Hide();
+                        label_key.Show();
+                        textBox_key.Show();
+                        label_header.Text = "   ШИФРУЮЩИЕ\n ТАБЛИЦЫ";
                         break;
                     }
                 case 6:
