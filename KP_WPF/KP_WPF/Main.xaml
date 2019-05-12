@@ -30,7 +30,7 @@
             <Button x:Name="button_createObject" Content="Создание объекта" Click="Button_createObject_click" MinWidth="100"/>
             <Button x:Name="button_test" Content="Тест" Click="Button_test_click" MinWidth="100"/>
             <Button x:Name="button_graphic" Content="Графика" Click="Button_graphic_click" MinWidth="100"/>
-            <Button x:Name="button_report" Content="Отчёты" Click="Button_report_click" MinWidth="100"/>
+            <Button x:Name="button_report" Content="Статья" Click="Button_report_click" MinWidth="100"/>
             
         </StackPanel>
     </Grid>
