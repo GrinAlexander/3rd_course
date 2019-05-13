@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KP_WPF"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Graphic" Height="450" Width="800">
+        Title="Graphic" Height="450" Width="800" MinHeight="300" MinWidth="500">
     <Window.Icon>
         <DrawingImage>
             <DrawingImage.Drawing>
@@ -25,6 +25,11 @@
         </DrawingImage>
     </Window.Icon>
     <Grid>
-        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
+        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
+        <Button x:Name="button_draw"  Content="Нарисовать" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 10, 0, 0" Click="Button_draw_Click"/>
+        <Canvas x:Name="canvas_Main" Margin="50" SizeChanged="Canvas_Main_SizeChanged">
+            <Line x:Name="line_Ox" Stroke="Black"/>
+            <Line x:Name="line_Oy" Stroke="Black"/>
+        </Canvas>
     </Grid>
 </Window>

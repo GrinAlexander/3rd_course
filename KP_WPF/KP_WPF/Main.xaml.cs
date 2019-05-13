@@ -42,7 +42,7 @@ namespace KP_WPF
 
         private void Button_report_click(object sender, RoutedEventArgs e)
         {
-            Report report = new Report();
+            Article report = new Article();
             report.Show();
             this.Close();
         }

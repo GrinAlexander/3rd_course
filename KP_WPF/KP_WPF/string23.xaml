@@ -24,7 +24,7 @@
         </DrawingImage>
     </Window.Icon>
     <Grid>
-        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
+        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
         <TextBox x:Name="tb_input" BorderThickness="1" FontFamily="Garamond" FontSize="13" Foreground="Purple" TextWrapping="Wrap" MinWidth="150" Margin="5,30,0,225" >Введите текст</TextBox>
         <Button Content="Проверить на палиндром" Click="Button_Check_click" Height="30" Width="200" HorizontalAlignment="Left" Margin="5, 30, 0, 0"/>
         <TextBlock x:Name="tblock_result"  FontFamily="Garamond" FontSize="13" Foreground="Red" Margin="5,270,0,0"/>

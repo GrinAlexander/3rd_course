@@ -95,7 +95,6 @@ C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\CreateObject.g.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Graphic.g.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Main.g.cs
-C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Report.g.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\string23.g.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Test.g.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\App.g.cs
@@ -104,7 +103,6 @@ C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF_Ma
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\CreateObject.baml
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Graphic.baml
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Main.baml
-C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Report.baml
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\string23.baml
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Test.baml
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.g.resources
@@ -113,3 +111,5 @@ C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csproj.CoreCompileInputs.cache
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.exe
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.pdb
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Article.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Article.baml

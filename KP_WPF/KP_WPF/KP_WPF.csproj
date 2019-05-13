@@ -58,8 +58,8 @@
     <Compile Include="Graphic.xaml.cs">
       <DependentUpon>Graphic.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Report.xaml.cs">
-      <DependentUpon>Report.xaml</DependentUpon>
+    <Compile Include="Article.xaml.cs">
+      <DependentUpon>Article.xaml</DependentUpon>
     </Compile>
     <Compile Include="Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
@@ -76,7 +76,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Report.xaml">
+    <Page Include="Article.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

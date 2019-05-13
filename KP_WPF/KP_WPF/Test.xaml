@@ -33,7 +33,7 @@
         </DrawingImage>
     </Window.Icon>
     <Grid x:Name="layoutRoot" Background="LightGray">
-        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Click="Button_back_Click"/>
+        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
         <Label Content="1. Я чувствую подавленность." Margin="30, 30, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label Content="2. Утром я чувствую себя лучше всего." Margin="30, 60, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label Content="3. У меня бывают периоды плача или близости к слезам." Margin="30, 90, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
