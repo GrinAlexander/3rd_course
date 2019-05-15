@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZKI.Ciphers
 {
     class EncryptionTable
     {
         private string mainString;
-        private string result;
         private string key;
         private int m;
         private int n;

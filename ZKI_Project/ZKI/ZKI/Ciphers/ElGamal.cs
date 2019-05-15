@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZKI.Ciphers
 {
@@ -64,8 +61,6 @@ namespace ZKI.Ciphers
     class ElGamal
     {
         private string mainString = "";
-        private long x;
-        private BigInteger buf;
         private BigInteger buf_A;
 
         private char[] alphabit = new char[] { '.', ',', '!', '?', ' ', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о',

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZKI.Ciphers
 {
@@ -22,14 +19,8 @@ namespace ZKI.Ciphers
 
         public string Encrypt()
         {
-
-            //создаём таблицы для шифрования
             char[,] matrixAlphabit = CreateTable(keyTB_1);
-
-            //разбиваем строку на биграммы
             CreateBigrams();
-
-            //сам алгоритм шифрования
             string bigram = "";
             int i_1 = 0, i_2 = 0, j_1 = 0, j_2 = 0;
             for (int k = 0; k < bigrams.Count; k++)
@@ -216,7 +207,6 @@ namespace ZKI.Ciphers
         {
             int chCounter = 0;
             mainString = mainString.ToLower();
-            //проверяем строку, если есть повторяющиеся символы, то вставляем "Ъ"
             for (int i = 1; i < mainString.Length; i++)
             {
                 if (mainString[i] == mainString[i - 1])
@@ -224,8 +214,6 @@ namespace ZKI.Ciphers
                     mainString = mainString.Insert(i, "ъ");
                 }
             }
-
-            //находим количество букв в строке
             for (int i = 0; i < mainString.Length; i++)
             {
                 if (mainString[i] >= 'а' && mainString[i] <= 'я')
@@ -233,13 +221,10 @@ namespace ZKI.Ciphers
                     chCounter++;
                 }
             }
-            //проверяем количество букв на чётность, если не чётно, то вставляем "Ъ" в конец, чтобы получились полные биграммы
             if (chCounter % 2 != 0)
             {
                 mainString += "ъ";
             }
-
-            //создаём строку из биграмм
             string strBigrams = string.Empty;
             string bigram = string.Empty;
             for (int i = 0; i < mainString.Length; i++)

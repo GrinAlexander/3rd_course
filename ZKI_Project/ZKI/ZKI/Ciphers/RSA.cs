@@ -10,7 +10,6 @@ namespace ZKI
     {
         private string mainString = "";
         private string encryptedString = "";
-        private string decryptedString = "";
         private long key_1;
         private long key_2;
         private long n;
