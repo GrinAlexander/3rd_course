@@ -13,81 +13,146 @@ namespace ZKI.Ciphers
         private string key;
         private int m;
         private int n;
+        private char[,] matrixOfChar;
         public EncryptionTable(string mainString, string key)
         {
             this.mainString = mainString;
             this.key = key;
-            this.m = this.key.Length;
-            this.n = (int)(this.mainString.Length / this.key.Length) + 1 ;
+            this.n = this.key.Length;
+            if (this.mainString.Length % this.key.Length == 0)
+            {
+                this.m = (int)(this.mainString.Length / this.key.Length) + 1;
+            }
+            else
+            {
+                this.m = (int)(this.mainString.Length / this.key.Length) + 2;
+            }
         }
         public string Encrypt()
         {
             string result = "";
-            string strDecrypted = mainString.Replace(' ', '_');
-            char[,] matrixOfChar = new char[6, 8];
-
+            matrixOfChar = new char[m, n];
+            FormString();
             int index = 0;
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < n; j++)
             {
                 matrixOfChar[0, j] = key[j];
             }
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < n; j++)
             {
-                for (int i = 1; i < 6; i++)
+                for (int i = 1; i < m; i++)
                 {
-                    matrixOfChar[i, j] = strDecrypted[index];
+                    matrixOfChar[i, j] = mainString[index];
                     index++;
                 }
             }
 
-            char indexCh = 'а';
-            result = null;
-            while (indexCh <= 'я')
+            for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < n; j++)
                 {
-                    for (int i = 1; i < 6; i++)
+                    Console.Write(matrixOfChar[i, j]);
+                }
+                Console.WriteLine();
+            }
+
+            char indexCh = 'а';
+            for (int i = 1; i < m; i++)
+            {
+                while (indexCh <= 'я')
+                {
+                    for (int j = 0; j < n; j++)
                     {
-                        if (indexCh == matrixOfChar[0, j])
+                        if (indexCh == matrixOfChar[0, j] && matrixOfChar[i, j] != '1')
                         {
                             result += matrixOfChar[i, j];
                         }
                     }
+                    indexCh++;
                 }
-                indexCh++;
+                indexCh = 'а';
             }
             return result;
         }
-        private void FormKey()
+
+        public string Decrypt()
         {
-            for (int i = 0; i < key.Length; i++)
+            string result = "";
+            matrixOfChar = new char[m, n];
+            FormArray();
+            int index = 0;
+            for (int j = 0; j < n; j++)
             {
-                if (key.Length == 8)
+                matrixOfChar[0, j] = key[j];
+            }
+
+            char indexCh = 'а';
+            for (int i = 1; i < m; i++)
+            {
+                while (indexCh <= 'я')
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        if (indexCh == matrixOfChar[0, j] && matrixOfChar[i, j] != '1')
+                        {
+                            matrixOfChar[i, j] = mainString[index];
+                            index++;
+                        }
+                    }
+                    indexCh++;
+                }
+                indexCh = 'а';
+            }
+
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(matrixOfChar[i, j]);
+                }
+                Console.WriteLine();
+            }
+
+            for (int j = 0; j < n; j++)
+            {
+                for (int i = 1; i < m; i++)
+                {
+                    if (matrixOfChar[i, j] != '1')
+                    {
+                        result += matrixOfChar[i, j];
+                    }
+                }
+            }
+            return result;
+        }
+
+        private void FormString()
+        {
+            for (int i = 0; i < mainString.Length; i++)
+            {
+                if (mainString.Length == this.m * this.n)
                 {
                     break;
                 }
                 else
                 {
-                    key += key[i];
+                    mainString += "1";
                 }
             }
         }
-        private void FormString()
+        private void FormArray()
         {
-            if (mainString.Length > 40)
+            int cnt = 0;
+            for (int j = n - 1; j > 0; j--)
             {
-                mainString = mainString.Remove(40);
-                return;
-            }
-            for (int i = 0; i < mainString.Length; i++)
-            {
-                if (mainString.Length == 40)
+                for (int i = m - 1; i > 0; i--)
                 {
-                    break;
-                }
-                else
-                {
-                    mainString += mainString[i];
+                    if (cnt + mainString.Length == (m - 1) * n)
+                    {
+                        break;
+                    }
+                    matrixOfChar[i, j] = '1';
+                    cnt++;
                 }
             }
         }

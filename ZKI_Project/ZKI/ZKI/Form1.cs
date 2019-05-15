@@ -3,22 +3,28 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using ZKI.Ciphers;
+using System.Numerics;
 
 namespace ZKI
 {
     public partial class Form1 : Form
     {
-        //private RSA obj = new RSA();
         public Form1()
         {
             InitializeComponent();
         }
-
+        ElGamal elGamal = new ElGamal();
+        static long b = Convert.ToInt64(ElGamalHelper.GetInt());
+        static long p = Convert.ToInt64(ElGamalHelper.GetInt());
+        static long g = ElGamalHelper.Calculate_g(p);
+        static long x = ElGamalHelper.Calculate_x(p);
+        static BigInteger buf = BigInteger.Pow(g, (int)(x));
+        static BigInteger y = buf % p;
+        static BigInteger buf_A = 0;
         private void button_Encr_Click(object sender, EventArgs e)
         {
             switch (comboBox_changeType.SelectedIndex)
             {
-
                 //ШИФРОВАНИЕ
                 case 0:
                     {
@@ -127,7 +133,6 @@ namespace ZKI
                                         }
                                         catch (Exception)
                                         {
-
                                             MessageBox.Show("Введите ключ для шифрования!");
                                         }
 
@@ -146,15 +151,17 @@ namespace ZKI
                                     }
                                     else
                                     {
-                                        //try
-                                        //{
+                                        string input = textBox_key.Text.ToLower();
+                                        for (int i = 0; i < input.Length; i++)
+                                        {
+                                            if (input[i] < 'а' || input[i] > 'я')
+                                            {
+                                                MessageBox.Show("Ключ должен состоять только из букв русского алфавита!");
+                                                return;
+                                            }
+                                        }
                                         EncryptionTable obj = new EncryptionTable(textBox_input.Text.ToLower(), textBox_key.Text);
                                         textBox_output.Text = obj.Encrypt();
-                                        //}
-                                        // catch
-                                        //{
-                                        //    MessageBox.Show("Введите корректные данные!");
-                                        // }
                                     }
                                     break;
                                 }
@@ -203,7 +210,17 @@ namespace ZKI
                                 }
                             case 7: //Эль-Гамаль
                                 {
+                                    if (textBox_input.Text == "")
+                                    {
+                                        MessageBox.Show("Введите текст для шифрования!");
+                                    }
+                                    else
+                                    {
+                                        ElGamal obj = new ElGamal(textBox_input.Text);
+                                        textBox_output.Text = obj.Encrypt(p, g, y);
+                                        buf_A = obj.GetBufA();
 
+                                    }
                                     break;
                                 }
                         }
@@ -315,7 +332,28 @@ namespace ZKI
                                 }
                             case 5: //Шифрующие таблицы
                                 {
-
+                                    if (textBox_input.Text == "")
+                                    {
+                                        MessageBox.Show("Введите текст для шифрования!");
+                                    }
+                                    else if (textBox_key.Text == "")
+                                    {
+                                        MessageBox.Show("Введите первое простое число для шифрования!");
+                                    }
+                                    else
+                                    {
+                                        string input = textBox_key.Text.ToLower();
+                                        for (int i = 0; i < input.Length; i++)
+                                        {
+                                            if (input[i] < 'а' || input[i] > 'я')
+                                            {
+                                                MessageBox.Show("Ключ должен состоять только из букв русского алфавита!");
+                                                return;
+                                            }
+                                        }
+                                        EncryptionTable obj = new EncryptionTable(textBox_input.Text.ToLower(), textBox_key.Text);
+                                        textBox_output.Text = obj.Decrypt();
+                                    }
                                     break;
                                 }
                             case 6: //РСА
@@ -368,7 +406,7 @@ namespace ZKI
                                                         item = null;
                                                     }
                                                 }
-                                                if (int.TryParse(item, out int x))
+                                                if (int.TryParse(item, out int _x))
                                                 {
                                                     list.Add(item);
                                                 }
@@ -390,7 +428,25 @@ namespace ZKI
                                 }
                             case 7: //Эль-Гамаль
                                 {
-
+                                    List<string> list = new List<string>();
+                                    string item = null;
+                                    for (int i = 0; i < textBox_input.Text.Length; i++)
+                                    {
+                                        if (char.IsDigit(textBox_input.Text[i]))
+                                        {
+                                            item += textBox_input.Text[i];
+                                        }
+                                        else
+                                        {
+                                            list.Add(item);
+                                            item = null;
+                                        }
+                                    }
+                                    if (int.TryParse(item, out int _x))
+                                    {
+                                        list.Add(item);
+                                    }
+                                    textBox_output.Text = elGamal.Decrypt(list, x, p, buf_A);
                                     break;
                                 }
                         }
@@ -462,6 +518,7 @@ namespace ZKI
                         textBox_key2.Hide();
                         label_key.Show();
                         textBox_key.Show();
+                        label_key.Text = "Ключ";
                         label_header.Text = "   ШИФРУЮЩИЕ\n ТАБЛИЦЫ";
                         break;
                     }
@@ -478,7 +535,12 @@ namespace ZKI
                     }
                 case 7:
                     {
-
+                        
+                        label_key2.Hide();
+                        textBox_key2.Hide();
+                        label_key.Hide();
+                        textBox_key.Hide();
+                        label_header.Text = "ШИФР ЭЛЬ-ГАМАЛЯ";
                         break;
                     }
             }
@@ -526,6 +588,11 @@ namespace ZKI
         private void ЗакрытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void РазработчикToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа разработана в качестве курсового проекта.\nГолубев Иван, группа Т-716, 3-й курс.");
         }
     }
 }
