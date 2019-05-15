@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using ZKI.Ciphers;
 
@@ -121,15 +122,15 @@ namespace ZKI
                                     {
                                         try
                                         {
-Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
-                                        textBox_output.Text = obj.Encrypt();
+                                            Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
+                                            textBox_output.Text = obj.Encrypt();
                                         }
                                         catch (Exception)
                                         {
 
                                             MessageBox.Show("Введите ключ для шифрования!");
                                         }
-                                        
+
                                     }
                                     break;
                                 }
@@ -147,13 +148,13 @@ Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
                                     {
                                         //try
                                         //{
-                                            EncryptionTable obj = new EncryptionTable(textBox_input.Text.ToLower(), textBox_key.Text);
-                                            textBox_output.Text = obj.Encrypt();
+                                        EncryptionTable obj = new EncryptionTable(textBox_input.Text.ToLower(), textBox_key.Text);
+                                        textBox_output.Text = obj.Encrypt();
                                         //}
-                                       // catch
+                                        // catch
                                         //{
                                         //    MessageBox.Show("Введите корректные данные!");
-                                       // }
+                                        // }
                                     }
                                     break;
                                 }
@@ -498,6 +499,33 @@ Vernam obj = new Vernam(textBox_input.Text, textBox_key.Text);
                         break;
                     }
             }
+        }
+
+        private void СохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string text = null;
+            text = $"Выбранный шифр: {comboBox_cipher.Text} \nВид преобразования: {comboBox_changeType.Text} \nВводимый текст: {textBox_input.Text} \nРезультат: {textBox_output.Text}";
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                InitialDirectory = "D:/",
+                FilterIndex = 0,
+                Filter = "TXT File |*.txt"
+            };
+            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter(saveFileDialog.OpenFile());
+                sw.WriteLine(text);
+                sw.Close();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void ЗакрытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
