@@ -56,7 +56,8 @@ namespace UnityEditor
 			BoxFill(gridLayout, brushTarget, bounds);
 		}
 
-		private void PaintCell(GridLayout grid, Vector3Int position, Transform parent, BrushCell cell)
+        [Obsolete]
+        private void PaintCell(GridLayout grid, Vector3Int position, Transform parent, BrushCell cell)
 		{
 			if (cell.gameObject != null)
 			{
@@ -385,7 +386,8 @@ namespace UnityEditor
 			}
 		}
 
-		private static void SetSceneCell(GridLayout grid, Transform parent, Vector3Int position, GameObject go, Vector3 offset, Vector3 scale, Quaternion orientation)
+        [Obsolete]
+        private static void SetSceneCell(GridLayout grid, Transform parent, Vector3Int position, GameObject go, Vector3 offset, Vector3 scale, Quaternion orientation)
 		{
 			if (parent == null || go == null)
 				return;

@@ -113,3 +113,8 @@ C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.ex
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.pdb
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Article.g.cs
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\Article.baml
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\OxyPlot.dll
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csproj.CopyComplete

@@ -60,6 +60,7 @@ namespace GameFramework.GameStructure.GameItems.Editor
             _giVariablesProperty = serializedObject.FindProperty("_variables");
         }
 
+        [Obsolete]
         public override void OnInspectorGUI()
         {
             serializedObject.Update();

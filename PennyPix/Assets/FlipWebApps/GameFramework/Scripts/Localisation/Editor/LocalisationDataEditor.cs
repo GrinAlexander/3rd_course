@@ -25,6 +25,7 @@ using GameFramework.EditorExtras.Editor;
 using GameFramework.Localisation.ObjectModel;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace GameFramework.Localisation.Editor
 {
@@ -122,6 +123,7 @@ namespace GameFramework.Localisation.Editor
 
         #region Entries
 
+        [Obsolete]
         protected void DrawEntries() {
             _entriesHelpRect = EditorHelper.ShowHideableHelpBox("GameFramework.LocalisationEditorWindow.Entries", "Entries contain a set of unique tags that identify the text that you want to localise. You can further associate different translations with these tags for the different languages that you have setup.", _entriesHelpRect);
 
@@ -236,7 +238,7 @@ namespace GameFramework.Localisation.Editor
                                         {
                                             var sourceText = localisationEntry.Languages[0];
                                             string url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl="
-                                                         + sourceCode + "&tl=" + targetCode + "&dt=t&q=" + WWW.EscapeURL(sourceText);
+                                                         + sourceCode + "&tl=" + targetCode + "&dt=t&q=" + UnityWebRequest.EscapeURL(sourceText);
                                             var wwwForm = new WWWForm();
                                             wwwForm.AddField("username", "");
                                             //var headers = new Dictionary<string, string>();

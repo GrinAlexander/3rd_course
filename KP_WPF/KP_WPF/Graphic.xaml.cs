@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Forms.DataVisualization;
 
 namespace KP_WPF
 {
@@ -19,9 +20,12 @@ namespace KP_WPF
     /// </summary>
     public partial class Graphic : Window
     {
+        private List<double> xList = new List<double>();
+        private List<double> yList = new List<double>();
         public Graphic()
         {
             InitializeComponent();
+            chart.Series.Add("Main");
         }
         private void Button_back_Click(object sender, RoutedEventArgs e)
         {
@@ -32,19 +36,32 @@ namespace KP_WPF
 
         private void Button_draw_Click(object sender, RoutedEventArgs e)
         {
-            Line line = new Line();
-            Polyline polyline = new Polyline();
+            double y = 0;
+            for (int i = 0; i < 1; i++)
+            {
+                for (double x = 0; x <= 10; x++)
+                {
+                    y = Math.Pow(Math.Pow(x, 2) * (x + 1), 1.0/3);
+                    yList.Add(y);
+                    xList.Add(x);
+                }
+            }
+            for (int i = 0; i < xList.Count; i++)
+            {
+                chart.Series["Main"].Points.AddXY(xList[i], yList[i]);
+            }
+            
+            /*Polyline polyline = new Polyline();
             polyline.Stroke = Brushes.Red;
             double y;
-            for (double x = 0; x > 0; x -= 0.1)
+            for (double x = -100; x <=100 ; x++)
             {
-                y = Math.Pow(Math.Pow(x,2) * (x + 1), (double) 1 / 3);
-                polyline.Points.Add(new Point(x, y));
-
+                y = Math.Pow(Math.Pow(x,2) * (x + 1), 1.0 / 3.0);
+                polyline.Points.Add(new Point(Math.Abs(x), Math.Abs(y)));
             }
-            canvas_Main.Children.Add(polyline);
+            canvas_Main.Children.Add(polyline);*/
         }
-
+        /*
         private void DrawAxises()
         {
             line_Ox.X1 = 0;
@@ -61,6 +78,7 @@ namespace KP_WPF
         private void Canvas_Main_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             DrawAxises();
-        }
+        }*/
+
     }
 }
