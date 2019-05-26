@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 50915408107096866}
   - component: {fileID: 70180088752325968}
   - component: {fileID: 114230831923080080}
-  - component: {fileID: 5726469230835929211}
   m_Layer: 13
   m_Name: PennyPixel
   m_TagString: Player
@@ -156,16 +155,3 @@ MonoBehaviour:
   gravityModifier: 1.5
   maxSpeed: 7
   jumpTakeOffSpeed: 7
---- !u!114 &5726469230835929211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208144871472054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b4f0be6224934f4a9c18b71fd3bb486, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleSystem: {fileID: 0}

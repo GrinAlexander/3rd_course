@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,75 +11,104 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Forms.DataVisualization;
 
 namespace KP_WPF
 {
     /// <summary>
-    /// Логика взаимодействия для Graphic.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class Graphic : Window
     {
-        private List<double> xList = new List<double>();
-        private List<double> yList = new List<double>();
+        const int countDot = 10;
+        List<double[]> dataList = new List<double[]>();
+        DrawingGroup drawingGroup = new DrawingGroup();
         public Graphic()
         {
             InitializeComponent();
-            chart.Series.Add("Main");
+            DataFill();
+            Execute();
+            image1.Source = new DrawingImage(drawingGroup);
         }
-        private void Button_back_Click(object sender, RoutedEventArgs e)
+        void DataFill()
         {
-            Main main = new Main();
-            main.Show();
-            this.Close();
-        }
-
-        private void Button_draw_Click(object sender, RoutedEventArgs e)
-        {
-            double y = 0;
-            for (int i = 0; i < 1; i++)
+            List<double> func = new List<double>();
+            for (double i = -3; i < 3; i += 0.6)
             {
-                for (double x = 0; x <= 10; x++)
-                {
-                    y = Math.Pow(Math.Pow(x, 2) * (x + 1), 1.0/3);
-                    yList.Add(y);
-                    xList.Add(x);
-                }
+                func.Add(Math.Sign(Math.Pow(i, 2) * (i + 1)) * Math.Pow(Math.Abs(Math.Pow(i, 2) * (i + 1)), 1 / 3.0));
             }
-            for (int i = 0; i < xList.Count; i++)
-            {
-                chart.Series["Main"].Points.AddXY(xList[i], yList[i]);
-            }
-            
-            /*Polyline polyline = new Polyline();
-            polyline.Stroke = Brushes.Red;
-            double y;
-            for (double x = -100; x <=100 ; x++)
-            {
-                y = Math.Pow(Math.Pow(x,2) * (x + 1), 1.0 / 3.0);
-                polyline.Points.Add(new Point(Math.Abs(x), Math.Abs(y)));
-            }
-            canvas_Main.Children.Add(polyline);*/
+            dataList.Add(func.ToArray());
         }
-        /*
-        private void DrawAxises()
+        void Execute()
         {
-            line_Ox.X1 = 0;
-            line_Ox.X2 = canvas_Main.ActualWidth;
-            line_Ox.Y1 = canvas_Main.ActualHeight / 2;
-            line_Ox.Y2 = line_Ox.Y1;
-
-            line_Oy.X1 = canvas_Main.ActualWidth / 2;
-            line_Oy.X2 = line_Oy.X1;
-            line_Oy.Y1 = 0;
-            line_Oy.Y2 = canvas_Main.ActualHeight;
+            BackgroundFun();
+            GridFun();
+            Fun();
+            MarkerFun();
         }
 
-        private void Canvas_Main_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void BackgroundFun()
         {
-            DrawAxises();
-        }*/
+            GeometryDrawing geometryDrawing = new GeometryDrawing();
+            RectangleGeometry rectGeometry = new RectangleGeometry();
+            rectGeometry.Rect = new Rect(0, 0, 1, 1.6);
+            geometryDrawing.Geometry = rectGeometry;
+            geometryDrawing.Pen = new Pen(Brushes.Red, 0.005);
+            geometryDrawing.Brush = Brushes.Beige;
+            drawingGroup.Children.Add(geometryDrawing);
+        }
+        private void GridFun()
+        {
+            GeometryGroup geometryGroup = new GeometryGroup();
+            for (int i = 0; i < 17; i++)
+            {
+                LineGeometry line = new LineGeometry(new Point(1.0, i * 0.1),
+                new Point(-0.1, i * 0.1));
+                geometryGroup.Children.Add(line);
+            }
+            GeometryDrawing geometryDrawing = new GeometryDrawing();
+            geometryDrawing.Geometry = geometryGroup;
+            geometryDrawing.Pen = new Pen(Brushes.Gray, 0.003);
+            double[] dashes = { 1, 1, 1, 1, 1 };
+            geometryDrawing.Pen.DashStyle = new DashStyle(dashes, -.1);
+            geometryDrawing.Brush = Brushes.Beige;
+            drawingGroup.Children.Add(geometryDrawing);
+        }
+        private void Fun()
+        {
 
+            GeometryGroup geometryGroup = new GeometryGroup();
+            for (int i = 0; i < dataList[0].Length - 1; i++)
+            {
+                LineGeometry line = new LineGeometry(
+                new Point((double)i / (double)countDot,
+                .8 - (dataList[0][i] / 4.0)),
+                new Point((double)(i + 1) / (double)countDot,
+                .8 - (dataList[0][i + 1] / 4.0)));
+                geometryGroup.Children.Add(line);
+            }
+            GeometryDrawing geometryDrawing = new GeometryDrawing();
+            geometryDrawing.Geometry = geometryGroup;
+            geometryDrawing.Pen = new Pen(Brushes.Blue, 0.005);
+            drawingGroup.Children.Add(geometryDrawing);
+        }
+        private void MarkerFun()
+        {
+            GeometryGroup geometryGroup = new GeometryGroup();
+
+            for (int i = 0; i <= 13; i++)
+            {
+                FormattedText formattedText = new FormattedText((((10 - i) * 0.1).ToString()), CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Verdana"), 0.05, Brushes.Black);
+                formattedText.SetFontWeight(FontWeights.Bold);
+                Geometry geometry = formattedText.BuildGeometry(new Point(-0.15, i * 0.12));
+                geometryGroup.Children.Add(geometry);
+            }
+            GeometryDrawing geometryDrawing = new GeometryDrawing();
+            geometryDrawing.Geometry = geometryGroup;
+            geometryDrawing.Brush = Brushes.LightGray;
+            geometryDrawing.Pen = new Pen(Brushes.Gray, 0.003);
+            drawingGroup.Children.Add(geometryDrawing);
+        }
     }
 }
