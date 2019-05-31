@@ -1,18 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace KP_WPF
 {
@@ -97,11 +87,11 @@ namespace KP_WPF
         {
             GeometryGroup geometryGroup = new GeometryGroup();
 
-            for (int i = 0; i <= 13; i++)
+            for (int i = 0; i <= 10; i++)
             {
                 FormattedText formattedText = new FormattedText((((10 - i) * 0.1).ToString()), CultureInfo.InvariantCulture, FlowDirection.LeftToRight, new Typeface("Verdana"), 0.05, Brushes.Black);
                 formattedText.SetFontWeight(FontWeights.Bold);
-                Geometry geometry = formattedText.BuildGeometry(new Point(-0.15, i * 0.12));
+                Geometry geometry = formattedText.BuildGeometry(new Point(-0.15, i * 0.15));
                 geometryGroup.Children.Add(geometry);
             }
             GeometryDrawing geometryDrawing = new GeometryDrawing();

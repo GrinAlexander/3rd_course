@@ -1,0 +1,16 @@
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Release\Manual.chm
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Release\CourseProject.exe.config
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Release\CourseProject.exe
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Release\CourseProject.pdb
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\MainWindow.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\App.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject_Content.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject_MarkupCompile.cache
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject_MarkupCompile.lref
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\MainWindow.baml
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.g.resources
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.Properties.Resources.resources
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.csproj.GenerateResource.cache
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.csproj.CoreCompileInputs.cache
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.exe
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.pdb
