@@ -46,5 +46,12 @@ namespace KP_WPF
             report.Show();
             this.Close();
         }
+
+        private void Button_db_Click(object sender, RoutedEventArgs e)
+        {
+            DataBase dataBase = new DataBase();
+            dataBase.Show();
+            this.Close();
+        }
     }
 }

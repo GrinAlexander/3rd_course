@@ -118,3 +118,8 @@ C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\OxyPlot.W
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\OxyPlot.Wpf.pdb
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\OxyPlot.Wpf.xml
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF.csproj.CopyComplete
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\Database.mdf
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\Database_log.ldf
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\DataBase.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\KP_WPF_Content.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\DataBase.baml
