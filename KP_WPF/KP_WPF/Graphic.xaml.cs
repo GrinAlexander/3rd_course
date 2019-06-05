@@ -21,6 +21,12 @@ namespace KP_WPF
             Execute();
             image1.Source = new DrawingImage(drawingGroup);
         }
+        private void Button_back_Click(object sender, RoutedEventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Close();
+        }
         void DataFill()
         {
             List<double> func = new List<double>();
