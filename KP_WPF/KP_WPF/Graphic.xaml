@@ -28,7 +28,7 @@
         </DrawingImage>
     </Window.Icon>
     <Grid>
-        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0"/>
+        <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
         <Grid Margin="50">
             <Image Name="image1">
             </Image>

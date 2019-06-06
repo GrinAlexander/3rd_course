@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KP_WPF"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="DataBase" Height="450" Width="800" MinHeight="400" MinWidth="700">
     <Window.Icon>
         <DrawingImage>
@@ -29,12 +31,9 @@
     </Window.Icon>
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
-        <TextBox x:Name="tb_surname" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 50, 0, 0" MinHeight="30" MinWidth="150"/>
-        <TextBox x:Name="tb_phoneNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 100, 0, 0" MinHeight="30" MinWidth="150"/>
-        <TextBox x:Name="tb_date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 150, 0, 0" MinHeight="30" MinWidth="150"/>
-        <TextBox x:Name="tb_tariff" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 200, 0, 0" MinHeight="30" MinWidth="150"/>
-        <TextBox x:Name="tb_dateStart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 250, 0, 0" MinHeight="30" MinWidth="150"/>
-        <TextBox x:Name="tb_dateEnd" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 300, 0, 0" MinHeight="30" MinWidth="150"/>
+        <TextBox x:Name="tb_surname" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 50, 0, 0" MinHeight="30" MinWidth="150" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tb_phoneNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 100, 0, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tb_tariff" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 200, 0, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextChanged="Tb_tariff_TextChanged"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 50, 0, 0" Content="Фамилия"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 100, 0, 0" Content="Номер телефона"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 150, 0, 0" Content="Дата звонка"/>
@@ -44,5 +43,38 @@
         <DataGrid x:Name="main_dataGrid" HorizontalAlignment="Right" Margin="450,50,10,0" VerticalAlignment="Top" AutoGenerateColumns="True" MinHeight="300"/>
         <Button x:Name="button_add" Content="Добавить" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,350,0,0" Click="Button_add_Click"/>
         <Button x:Name="button_delete" Content="Удалить" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140,350,0,0" Click="Button_delete_Click"/>
+        <Image x:Name="img_surnameError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 55, 0, 0" Visibility="Collapsed">
+            <Image.ToolTip>
+                <ToolTip Content="Введите фамилию с большой буквы"/>
+            </Image.ToolTip>
+        </Image>
+        <Image x:Name="img_phoneNumberError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 105, 0, 0" Visibility="Collapsed">
+            <Image.ToolTip>
+                <ToolTip Content="Формат номер телефона +375XXYYYYYYY"/>
+            </Image.ToolTip>
+        </Image>
+        <Image x:Name="img_dateError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 155, 0, 0" Visibility="Collapsed">
+            <Image.ToolTip>
+                <ToolTip Content="Введите корректную дату звонка"/>
+            </Image.ToolTip>
+        </Image>
+        <Image x:Name="img_tariffError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 205, 0, 0" Visibility="Collapsed">
+            <Image.ToolTip>
+                <ToolTip Content="Введите корректный тариф"/>
+            </Image.ToolTip>
+        </Image>
+        <Image x:Name="img_dateStartError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 255, 0, 0" Visibility="Collapsed">
+            <Image.ToolTip>
+                <ToolTip Content="Введите корректную дату начала звонка"/>
+            </Image.ToolTip>
+        </Image>
+        <Image x:Name="img_dateEndError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 305, 0, 0" Visibility="Collapsed">
+            <Image.ToolTip>
+                <ToolTip Content="Дата окончания звонка должна быть позже начала"/>
+            </Image.ToolTip>
+        </Image>
+        <wpfTool:DateTimePicker x:Name="dt_date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 150, 0, 0" MinHeight="30" Width="150" AllowSpin="False" Maximum="12/31/2019 23:59:00" Minimum="1980-01-01" Format="ShortDate" AllowTextInput="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <wpfTool:DateTimePicker x:Name="dt_dateStart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 250, 0, 0" MinHeight="30" Width="150" AllowSpin="False" Maximum="12/31/2019 23:59:00" Minimum="1980-01-01" Format="FullDateTime" AllowTextInput="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <wpfTool:DateTimePicker x:Name="dt_dateEnd" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 300, 0, 0" MinHeight="30" Width="150" AllowSpin="False" Maximum="12/31/2019 23:59:00" Minimum="1980-01-01" Format="FullDateTime" AllowTextInput="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
