@@ -34,6 +34,9 @@
     </Window.Icon>
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
+        <ScrollViewer Margin="50, 50, 50, 0" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+            <Image Source="/Page.jpg" HorizontalAlignment="Stretch" Stretch="UniformToFill"/>
+        </ScrollViewer>
         
     </Grid>
 </Window>

@@ -223,6 +223,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Resource Include="Page.jpg" />
     <Resource Include="Icon\error.png" />
   </ItemGroup>
   <ItemGroup>

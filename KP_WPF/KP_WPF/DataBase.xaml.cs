@@ -30,7 +30,27 @@ namespace KP_WPF
         private DateTime? _date = null;
         private DateTime? _dateStart = null;
         private DateTime? _dateEnd = null;
+        private int? _id = 0;
         Regex regex = new Regex(@"(\+375)(44|25|33|29|)[0-9]{7}$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        public int? ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (value != null && value > 0)
+                {
+                    _id = value;
+                    img_idError.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    img_idError.Visibility = Visibility.Visible;
+                }
+            }
+        }
         public string Surname
         {
             get
@@ -79,7 +99,8 @@ namespace KP_WPF
             {
                 if (value != null)
                 {
-                    _date = value;
+                    _date = new DateTime(value.Value.Year, value.Value.Month, value.Value.Day, value.Value.Hour, value.Value.Minute, 0);
+
                     img_dateError.Visibility = Visibility.Collapsed;
                 }
                 else
@@ -117,9 +138,7 @@ namespace KP_WPF
             {
                 if (value != null)
                 {
-                    _dateStart = value;
-                    _dateStart.Value.AddHours(value.Value.Hour);
-                    _dateStart.Value.AddMinutes(value.Value.Minute);
+                    _dateStart = new DateTime(value.Value.Year, value.Value.Month, value.Value.Day, value.Value.Hour, value.Value.Minute, 0);
                     img_dateStartError.Visibility = Visibility.Collapsed;
                 }
                 else
@@ -138,9 +157,7 @@ namespace KP_WPF
             {
                 if (_dateStart < value && value != null)
                 {
-                    _dateEnd = value;
-                    _dateEnd.Value.AddHours(value.Value.Hour);
-                    _dateEnd.Value.AddMinutes(value.Value.Minute);
+                    _dateEnd = new DateTime(value.Value.Year, value.Value.Month, value.Value.Day, value.Value.Hour, value.Value.Minute, 0);
                     img_dateEndError.Visibility = Visibility.Collapsed;
                 }
                 else
@@ -190,7 +207,7 @@ namespace KP_WPF
         {
             try
             {
-                Surname = tb_surname.Text;
+                Surname = @tb_surname.Text;
                 PhoneNumber = tb_phoneNumber.Text;
                 Date = dt_date.Value;
                 if (tb_tariff.Text != "")
@@ -203,11 +220,11 @@ namespace KP_WPF
                 }
                 DateStart = dt_dateStart.Value;
                 DateEnd = dt_dateEnd.Value;
-                CheckCorrectness();
+                CheckInsertCorrectness();
                 if (Correctness)
                 {
                     connection.Open();
-                    string query = $"INSERT INTO [Bills] (surname, phoneNumber, date, tariff, dateStart, dateEnd) VALUES ('{_surname}', '{_phoneNumber}', '{_date}', '{_tariff}', '{_dateStart}', '{_dateEnd}') ";
+                    string query = $"INSERT INTO [Bills] (surname, phoneNumber, date, tariff, dateStart, dateEnd) VALUES (N'{_surname}', '{_phoneNumber}', '{_date}', '{_tariff}', '{_dateStart}', '{_dateEnd}') ";
                     SqlCommand sqlCommand = new SqlCommand(query, connection);
                     sqlCommand.ExecuteNonQuery();
                     connection.Close();
@@ -224,11 +241,21 @@ namespace KP_WPF
         {
             try
             {
-                CheckCorrectness();
+                if (int.TryParse(tb_id.Text, out int res))
+                {
+                    ID = res;
+                }
+                else
+                {
+                    ID = 0;
+                }
+                CheckDeleteCorrectness();
                 if (Correctness)
                 {
                     connection.Open();
-                    string query = "SELECT * FROM Bills";
+                    string query = $"DELETE FROM [Bills] WHERE bill_id = {_id}";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
                     connection.Close();
                     ShowData();
                 }
@@ -247,11 +274,23 @@ namespace KP_WPF
             }
         }
 
-        private void CheckCorrectness()
+        private void CheckInsertCorrectness()
         {
             if (img_surnameError.Visibility == Visibility.Collapsed && img_phoneNumberError.Visibility == Visibility.Collapsed &&
                 img_dateError.Visibility == Visibility.Collapsed && img_tariffError.Visibility == Visibility.Collapsed &&
                 img_dateStartError.Visibility == Visibility.Collapsed && img_dateEndError.Visibility == Visibility.Collapsed)
+            {
+                Correctness = true;
+            }
+            else
+            {
+                Correctness = false;
+            }
+        }
+
+        private void CheckDeleteCorrectness()
+        {
+            if (img_idError.Visibility == Visibility.Collapsed)
             {
                 Correctness = true;
             }
