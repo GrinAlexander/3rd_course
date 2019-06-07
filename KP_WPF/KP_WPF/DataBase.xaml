@@ -7,7 +7,62 @@
         xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="DataBase" Height="450" Width="800" MinHeight="400" MinWidth="700">
+        Title="DataBase" Height="600" Width="800" MinHeight="600" MinWidth="770">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.668"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="12"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.636"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.045"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="grid">
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="7"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.5"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Button x:Name="button_report" Click="Button_report_Click" Content="Отчёт"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Window.Icon>
         <DrawingImage>
             <DrawingImage.Drawing>
@@ -31,18 +86,22 @@
     </Window.Icon>
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
+        <Button x:Name="button_refresh" Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,400,0,0" Click="Button_refresh_Click" Height="22"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="700,400,0,0" Style="{DynamicResource ButtonStyle1}" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_surname" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 50, 0, 0" MinHeight="30" MinWidth="150" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <TextBox x:Name="tb_phoneNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 100, 0, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="tb_id" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 15, 150, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="tb_tariff" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 200, 0, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextChanged="Tb_tariff_TextChanged"/>
+        <TextBox x:Name="tb_id" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="450, 15, 150, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="tb_tariff" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 200, 0, 0" MinHeight="30" MinWidth="50"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextChanged="Tb_tariff_TextChanged"/>
+        <TextBox x:Name="tb_discount" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150, 200, 0, 0" MinHeight="30" MinWidth="50"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center" TextChanged="Tb_discount_TextChanged"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 50, 0, 0" Content="Фамилия"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 100, 0, 0" Content="Номер телефона"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 150, 0, 0" Content="Дата звонка"/>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 200, 0, 0" Content="Тариф"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100, 200, 0, 0" Content="Тариф"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 200, 0, 0" Content="Скидка"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 250, 0, 0" Content="Дата начала"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200, 300, 0, 0" Content="Дата окончания"/>
         <Label HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0, 15, 130, 0" Content="id"/>
-        <DataGrid x:Name="main_dataGrid" HorizontalAlignment="Right" Margin="450,50,10,0" VerticalAlignment="Top" AutoGenerateColumns="True" MinHeight="300"/>
+        <DataGrid x:Name="main_dataGrid" HorizontalAlignment="Stretch" Margin="450,50,10,0" VerticalAlignment="Top" AutoGenerateColumns="True" Height="300" CanUserReorderColumns="False" MinColumnWidth="30" IsReadOnly="True"/>
         <Button x:Name="button_add" Content="Добавить" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,350,0,0" Click="Button_add_Click"/>
         <Button x:Name="button_delete" Content="Удалить" Width="60" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,50,0" Click="Button_delete_Click"/>
         <Image x:Name="img_surnameError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 55, 0, 0" Visibility="Collapsed">
@@ -62,7 +121,7 @@
         </Image>
         <Image x:Name="img_tariffError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 205, 0, 0" Visibility="Collapsed">
             <Image.ToolTip>
-                <ToolTip Content="Введите корректный тариф"/>
+                <ToolTip Content="Введите корректный тариф и скидку"/>
             </Image.ToolTip>
         </Image>
         <Image x:Name="img_dateStartError" Source="/Icon/error.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30, 255, 0, 0" Visibility="Collapsed">
@@ -83,5 +142,22 @@
         <wpfTool:DateTimePicker x:Name="dt_date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 150, 0, 0" MinHeight="30" Width="150" AllowSpin="False" Maximum="12/31/2019 23:59:00" Minimum="1980-01-01" Format="ShortDate" AllowTextInput="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <wpfTool:DateTimePicker x:Name="dt_dateStart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 250, 0, 0" MinHeight="30" Width="150" AllowSpin="False" Maximum="12/31/2019 23:59:00" Minimum="1980-01-01" Format="FullDateTime" AllowTextInput="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <wpfTool:DateTimePicker x:Name="dt_dateEnd" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 300, 0, 0" MinHeight="30" Width="150" AllowSpin="False" Maximum="12/31/2019 23:59:00" Minimum="1980-01-01" Format="FullDateTime" AllowTextInput="False" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="cb_example" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 400, 0, 0" MinWidth="150" SelectionChanged="Cb_example_SelectionChanged">
+            <TextBlock Text="1. Сортировка"/>
+            <TextBlock Text="2. Повторы номеров"/>
+            <TextBlock Text="3. Сортировка длительности" MaxWidth="100" TextWrapping="WrapWithOverflow"/>
+            <TextBlock Text="4. Самый дорогой звонок"  MaxWidth="100" TextWrapping="WrapWithOverflow"/>
+        </ComboBox>
+        <Label  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,396,0,0" Content="Задания" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="26"/>
+        <Label  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,396,0,0" Content="Группировка" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+        <ComboBox x:Name="cb_group" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350, 400, 0, 0" MinWidth="150" SelectionChanged="Cb_group_SelectionChanged">
+            <TextBlock Text="1. surname"/>
+            <TextBlock Text="2. phoneNumber"/>
+            <TextBlock Text="3. date"/>
+            <TextBlock Text="4. tariff"/>
+            <TextBlock Text="5. discount"/>
+            <TextBlock Text="6. dateStart"/>
+            <TextBlock Text="7. dateEnd"/>
+        </ComboBox>
     </Grid>
 </Window>
