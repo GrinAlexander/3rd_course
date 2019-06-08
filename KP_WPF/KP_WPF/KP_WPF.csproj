@@ -106,6 +106,7 @@
     <Compile Include="Test.xaml.cs">
       <DependentUpon>Test.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Theme.cs" />
     <Page Include="CreateObject.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

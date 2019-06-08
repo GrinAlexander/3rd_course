@@ -23,6 +23,7 @@ namespace KP_WPF
         public String23()
         {
             InitializeComponent();
+            Background = Theme.background;
         }
         private void Button_Check_click(object sender, RoutedEventArgs e)
         {

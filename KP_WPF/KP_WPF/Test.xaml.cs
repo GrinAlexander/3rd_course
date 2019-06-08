@@ -19,16 +19,12 @@ namespace KP_WPF
     /// </summary>
     public partial class Test : Window
     {
-        enum Score
-        {
-
-        }
         List<int> comboBoxes = new List<int>(20);
         int result = 0;
         public Test()
         {
             InitializeComponent();
-            
+            Background = Theme.background;
         }
         private void Button_back_Click(object sender, RoutedEventArgs e)
         {

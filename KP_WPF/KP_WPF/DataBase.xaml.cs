@@ -184,6 +184,7 @@ namespace KP_WPF
         public DataBase()
         {
             InitializeComponent();
+            Background = Theme.background;
             this.Correctness = false;
             ShowData();
 

@@ -10,6 +10,7 @@ namespace KP_WPF
         public Main()
         {
             InitializeComponent();
+            Background = Theme.background;
         }
 
         private void Button_stringOpen(object sender, RoutedEventArgs e)
@@ -52,6 +53,11 @@ namespace KP_WPF
             DataBase dataBase = new DataBase();
             dataBase.Show();
             this.Close();
+        }
+
+        private void Cb_choose_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Background = Theme.ChangeTheme(cb_choose.SelectedIndex);
         }
     }
 }

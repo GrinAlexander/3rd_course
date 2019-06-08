@@ -8,61 +8,6 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="DataBase" Height="600" Width="800" MinHeight="600" MinWidth="770">
-    <Window.Resources>
-        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid x:Name="grid" RenderTransformOrigin="0.5,0.5">
-                            <Grid.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Grid.RenderTransform>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="MouseOver">
-                                        <Storyboard>
-                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="grid">
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.668"/>
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
-                                            </DoubleAnimationUsingKeyFrames>
-                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="12"/>
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
-                                            </DoubleAnimationUsingKeyFrames>
-                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="grid">
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.636"/>
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.045"/>
-                                            </DoubleAnimationUsingKeyFrames>
-                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="grid">
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="7"/>
-                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.5"/>
-                                            </DoubleAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Pressed"/>
-                                    <VisualState x:Name="Disabled"/>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Button x:Name="button_report" Click="Button_report_Click" Content="Отчёт"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsFocused" Value="True"/>
-                            <Trigger Property="IsDefaulted" Value="True"/>
-                            <Trigger Property="IsMouseOver" Value="True"/>
-                            <Trigger Property="IsPressed" Value="True"/>
-                            <Trigger Property="IsEnabled" Value="False"/>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
     <Window.Icon>
         <DrawingImage>
             <DrawingImage.Drawing>
@@ -87,7 +32,7 @@
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
         <Button x:Name="button_refresh" Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,400,0,0" Click="Button_refresh_Click" Height="22"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="700,400,0,0" Style="{DynamicResource ButtonStyle1}" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="700,400,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_surname" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 50, 0, 0" MinHeight="30" MinWidth="150" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <TextBox x:Name="tb_phoneNumber" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 100, 0, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         <TextBox x:Name="tb_id" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="450, 15, 150, 0" MinHeight="30" MinWidth="150"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>

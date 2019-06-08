@@ -35,8 +35,22 @@
     <Grid>
         <Button x:Name="button_back" Content="назад" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Click="Button_back_Click"/>
         <ScrollViewer Margin="50, 50, 50, 0" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
-            <Image Source="/Page.jpg" HorizontalAlignment="Stretch" Stretch="UniformToFill"/>
+            <Image x:Name="image_main" Source="/Page.jpg" HorizontalAlignment="Stretch" Stretch="UniformToFill"/>
         </ScrollViewer>
-        
+        <WrapPanel x:Name="MyContent">
+            <Menu x:Name="menu_general" Height="32" Width="183" Background="White">
+                <MenuItem Header="Файл">
+                    <MenuItem x:Name="menu_saveas" Header="Сохранить как..." Click="Menu_saveas_Click"/>
+                    <MenuItem x:Name="menu_print" Header="Печать" Click="Menu_print_Click"/>
+                </MenuItem>
+                <MenuItem Header="Поиск" />
+                <MenuItem Header="Выход">
+                    <MenuItem Header="Выйти в главное меню" Click="Button_back_Click"/>
+                    <Separator/>
+                    <MenuItem x:Name="menu_exit" Header="Выйти из приложения" Click="Menu_exit_Click"/>
+                </MenuItem>
+
+            </Menu>
+        </WrapPanel>
     </Grid>
 </Window>

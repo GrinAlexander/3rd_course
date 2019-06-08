@@ -138,3 +138,4 @@ C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\ro\Xceed.
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Alexander\Documents\GitHub\3rd_course\KP_WPF\KP_WPF\obj\Debug\App.baml

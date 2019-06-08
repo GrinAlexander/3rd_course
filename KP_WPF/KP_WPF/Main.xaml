@@ -25,8 +25,13 @@
         </DrawingImage>
     </Window.Icon>
     <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <Button x:Name="button_stringOpen" Content="Строки" Click="Button_stringOpen" MinWidth="100"/>
+        <ComboBox x:Name="cb_choose" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectionChanged="Cb_choose_SelectionChanged">
+            <TextBlock Text="Тёмная тема"/>
+            <TextBlock Text="Светлая тема"/>
+            <TextBlock Text="Синяя тема"/>
+        </ComboBox>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0, 30, 0, 0">
+            <Button x:Name="button_stringOpen" Content="Строки" Click="Button_stringOpen" MinWidth="100" />
             <Button x:Name="button_createObject" Content="Создание объекта" Click="Button_createObject_click" MinWidth="100"/>
             <Button x:Name="button_test" Content="Тест" Click="Button_test_click" MinWidth="100"/>
             <Button x:Name="button_graphic" Content="Графика" Click="Button_graphic_click" MinWidth="100"/>
