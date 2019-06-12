@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Media;
-using System.Windows.Shapes;
 using System.Drawing;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
 using System.Windows.Input;
-using System.Windows.Controls.Primitives;
 using System.IO;
 using System.Xml.Linq;
-using System.Security.Principal;
 using System.Windows.Media.Imaging;
 using System.Diagnostics;
 
@@ -645,7 +642,7 @@ namespace CourseProject
                     {
 
                         chkRefresh.Visibility = Visibility.Hidden;
-                        chkRefresh.Margin = new Thickness(100, 170, 10, 0);
+                        chkRefresh.Margin = new Thickness(60, 170, 10, 0);
                         label_ox.Visibility = Visibility.Visible;
                         label_oy.Visibility = Visibility.Visible;
                         label_point2.Visibility = Visibility.Visible;
@@ -664,7 +661,7 @@ namespace CourseProject
                 case 1:
                     {
                         chkRefresh.Visibility = Visibility.Visible;
-                        chkRefresh.Margin = new Thickness(100, 130, 10, 0);
+                        chkRefresh.Margin = new Thickness(60, 130, 10, 0);
                         label_ox.Visibility = Visibility.Hidden;
                         label_oy.Visibility = Visibility.Hidden;
                         label_point2.Visibility = Visibility.Hidden;
@@ -684,7 +681,7 @@ namespace CourseProject
                 case 2:
                     {
                         chkRefresh.Visibility = Visibility.Visible;
-                        chkRefresh.Margin = new Thickness(100, 130, 10, 0);
+                        chkRefresh.Margin = new Thickness(60, 130, 10, 0);
                         label_ox.Visibility = Visibility.Hidden;
                         label_oy.Visibility = Visibility.Hidden;
                         label_point2.Visibility = Visibility.Hidden;

@@ -1,0 +1,17 @@
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Debug\Manual.chm
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Debug\CourseProject.exe.config
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Debug\CourseProject.exe
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\bin\x64\Debug\CourseProject.pdb
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject.csprojAssemblyReference.cache
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\MainWindow.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\App.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject_Content.g.cs
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject_MarkupCompile.cache
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject_MarkupCompile.lref
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\MainWindow.baml
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject.g.resources
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject.Properties.Resources.resources
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject.csproj.GenerateResource.cache
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject.csproj.CoreCompileInputs.cache
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject.exe
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Debug\CourseProject.pdb

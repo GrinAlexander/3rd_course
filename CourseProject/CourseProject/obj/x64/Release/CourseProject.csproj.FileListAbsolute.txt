@@ -14,3 +14,4 @@ C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x
 C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.csproj.CoreCompileInputs.cache
 C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.exe
 C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.pdb
+C:\Users\Alexander\Documents\GitHub\3rd_course\CourseProject\CourseProject\obj\x64\Release\CourseProject.csprojAssemblyReference.cache

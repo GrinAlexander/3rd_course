@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.28917.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseProject", "CourseProject\CourseProject.csproj", "{2FBB3F85-AFC0-42B2-9BD3-C02A8663E142}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupCurves", "SetupCurves\SetupCurves.vdproj", "{DFE8F64F-3C84-4A16-AD23-67C677D7BF70}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{2FBB3F85-AFC0-42B2-9BD3-C02A8663E142}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2FBB3F85-AFC0-42B2-9BD3-C02A8663E142}.Release|x64.ActiveCfg = Release|x64
 		{2FBB3F85-AFC0-42B2-9BD3-C02A8663E142}.Release|x64.Build.0 = Release|x64
-		{DFE8F64F-3C84-4A16-AD23-67C677D7BF70}.Debug|Any CPU.ActiveCfg = Debug
-		{DFE8F64F-3C84-4A16-AD23-67C677D7BF70}.Debug|x64.ActiveCfg = Debug
-		{DFE8F64F-3C84-4A16-AD23-67C677D7BF70}.Release|Any CPU.ActiveCfg = Release
-		{DFE8F64F-3C84-4A16-AD23-67C677D7BF70}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

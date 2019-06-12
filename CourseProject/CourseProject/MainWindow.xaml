@@ -7,9 +7,9 @@
         xmlns:local="clr-namespace:CourseProject"
         mc:Ignorable="d"
         Icon="icon.ico"
-        Title="Curve" Height="900" Width="900" MinHeight="900" MinWidth="750" WindowStartupLocation="CenterScreen">
+        Title="Curve" Height="600" Width="750" MinHeight="400" MinWidth="650" WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Menu HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Aqua" Background="White">
                 <MenuItem Header="Файл" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                     <MenuItem Header="Открыть" Click="MenuItem_Open"/>
@@ -23,31 +23,27 @@
                 </MenuItem>
             </Menu>
         </StackPanel>
-        <Grid Margin="36,22,36,649" >
-            <TextBox x:Name="tb_x1" HorizontalAlignment="Left" Height="30" Margin="65,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
-            <TextBox x:Name="tb_y1" HorizontalAlignment="Left" Height="30" Margin="125,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
-            <Label x:Name="label_ox" Content="Ox" HorizontalAlignment="Left" Margin="65,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="35"/>
-            <Label x:Name="label_oy" Content="Oy" HorizontalAlignment="Left" Margin="125,30,0,0" VerticalAlignment="Top"  Width="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-            <Label x:Name="label_point1" Content="Точка 1" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="55"/>
-            <TextBox x:Name="tb_x2" HorizontalAlignment="Left" Height="30" Margin="65,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
-            <TextBox x:Name="tb_y2" HorizontalAlignment="Left" Height="30" Margin="125,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
-            <Label x:Name="label_point2" Content="Точка 2" HorizontalAlignment="Left" Margin="0,92,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="55"/>
-            <TextBox x:Name="tb_x3" HorizontalAlignment="Left" Height="30" Margin="65,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
-            <TextBox x:Name="tb_y3" HorizontalAlignment="Left" Height="30" Margin="125,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
-            <Label x:Name="label_point3" Content="Точка 3" HorizontalAlignment="Left" Margin="0,122,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="55"/>
-            <Button Content="Построить" HorizontalAlignment="Left" Margin="232,60,0,0" VerticalAlignment="Top" Width="120" Height="30" RenderTransformOrigin="0.483,0.5" Click="Button_Draw_Click" />
-            <Grid HorizontalAlignment="Right" Margin="0,60,0,0" VerticalAlignment="Top" Width="270">
-                <ComboBox x:Name="comboBox_curve" HorizontalAlignment="Right"  Width="150" Height="30" HorizontalContentAlignment="Left"  VerticalContentAlignment="Center" SelectionChanged="combobox_curve_Changed">
-                    <TextBlock Text="Кривая Безье"/>
-                    <TextBlock Text="Кривая Гильберта"/>
-                    <TextBlock Text="Кривая Серпинского"/>
-                </ComboBox>
-                <Label Content="Выберите функцию" HorizontalAlignment="Left"/>
-            </Grid>
-            <Button Content="Очистить" HorizontalAlignment="Left" Margin="232,120,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="Button_ClearCanvas"/>
-        </Grid>
-        <CheckBox x:Name="chkRefresh" Content="Обновлять кривую" Margin="100, 170, 10, 0" Width="150" Height="30" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Border Name="picCanvas_border" Margin="36,220,36,10" BorderBrush="Black" BorderThickness="2" Background="White" >
+        <TextBox x:Name="tb_x1" HorizontalAlignment="Left" Height="30" Margin="65,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
+        <TextBox x:Name="tb_y1" HorizontalAlignment="Left" Height="30" Margin="125,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
+        <Label x:Name="label_ox" Content="Ox" HorizontalAlignment="Left" Margin="65,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="35"/>
+        <Label x:Name="label_oy" Content="Oy" HorizontalAlignment="Left" Margin="125,30,0,0" VerticalAlignment="Top"  Width="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="label_point1" Content="Точка 1" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="55"/>
+        <TextBox x:Name="tb_x2" HorizontalAlignment="Left" Height="30" Margin="65,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
+        <TextBox x:Name="tb_y2" HorizontalAlignment="Left" Height="30" Margin="125,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
+        <Label x:Name="label_point2" Content="Точка 2" HorizontalAlignment="Left" Margin="0,92,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="55"/>
+        <TextBox x:Name="tb_x3" HorizontalAlignment="Left" Height="30" Margin="65,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
+        <TextBox x:Name="tb_y3" HorizontalAlignment="Left" Height="30" Margin="125,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="4"/>
+        <Label x:Name="label_point3" Content="Точка 3" HorizontalAlignment="Left" Margin="0,122,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="55"/>
+        <Button Content="Построить" HorizontalAlignment="Left" Margin="200,60,0,0" VerticalAlignment="Top" Width="120" Height="30" RenderTransformOrigin="0.483,0.5" Click="Button_Draw_Click" />
+        <ComboBox x:Name="comboBox_curve" Margin="0,60,30,0" HorizontalAlignment="Right" VerticalAlignment="Top"  Width="150" Height="30" HorizontalContentAlignment="Left"  VerticalContentAlignment="Center" SelectionChanged="combobox_curve_Changed">
+            <TextBlock Text="Кривая Безье"/>
+            <TextBlock Text="Кривая Гильберта"/>
+            <TextBlock Text="Кривая Серпинского"/>
+        </ComboBox>
+        <Label Content="Выберите функцию" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,180,0"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="200,120,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="Button_ClearCanvas"/>
+        <CheckBox x:Name="chkRefresh" Content="Обновлять кривую" Margin="60, 170, 10, 0" Width="150" Height="30" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Border Name="picCanvas_border" Margin="30,220,30,10" BorderBrush="Black" BorderThickness="2" Background="White" >
             <Popup Name="floatingTip" AllowsTransparency="True" Placement="Relative" PlacementTarget="{Binding ElementName=picCanvas_border}">
                 <TextBlock x:Name="tb_popup"></TextBlock>
             </Popup>
